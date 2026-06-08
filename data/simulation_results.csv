@@ -1,0 +1,31 @@
+day,event,stimulus,N,S,R,C,E,A,GRACE,zone
+1,Anak menelepon dengan hangat,a_rel,74,71,83,70,70,75,74.37,Stable
+2,Hari biasa tanpa kejadian khusus,a_nar,77,71,82,69,69,76,74.69,Stable
+3,Badan terasa lemah,a_prac,75,71,82,69,68,75,73.97,Stable
+4,Cucu mengirim foto kegiatan sekolah,a_nar,83,71,88,71,68,78,77.7,Stable
+5,Cucu mengirim foto kegiatan sekolah,a_nar,91,71,94,73,68,81,81.43,Stable
+6,Anak tidak menelepon hari ini,a_rel,90,71,93,73,68,80,80.86,Stable
+7,Anak menelepon dengan hangat,a_rel,94,72,100,73,68,85,84.03,Stable
+8,Konflik kecil dengan anak,a_rel,92,70,98,73,68,83,82.61,Stable
+9,Anak menelepon dengan hangat,a_rel,96,71,100,73,68,88,84.78,Stable
+10,Mengenang pasangan yang telah meninggal,a_spi,94,72,96,73,68,85,83.23,Stable
+11,Diminta memberi nasihat oleh cucu,a_con,99,72,100,87,68,87,87.67,Flourishing
+12,Hari biasa tanpa kejadian khusus,a_nar,100,72,99,86,67,88,87.55,Flourishing
+13,Hari biasa tanpa kejadian khusus,a_nar,100,72,98,85,66,89,87.21,Flourishing
+14,Anak menelepon dengan hangat,a_rel,100,73,100,85,66,94,88.5,Flourishing
+15,Cucu mengirim foto kegiatan sekolah,a_nar,100,73,100,87,66,97,89.27,Flourishing
+16,Cucu mengirim foto kegiatan sekolah,a_nar,100,73,100,89,66,100,90.04,Flourishing
+17,Konflik kecil dengan anak,a_rel,98,71,98,89,66,98,88.62,Flourishing
+18,Mengenang pasangan yang telah meninggal,a_spi,96,72,94,89,66,95,87.07,Flourishing
+19,Hari biasa tanpa kejadian khusus,a_nar,99,72,93,88,65,96,87.39,Flourishing
+20,Konflik kecil dengan anak,a_rel,97,70,91,88,65,94,85.97,Flourishing
+21,Cucu mengirim foto kegiatan sekolah,a_nar,100,70,97,90,65,97,88.6,Flourishing
+22,Konflik kecil dengan anak,a_rel,98,68,95,90,65,95,87.18,Flourishing
+23,Diminta memberi nasihat oleh cucu,a_con,100,68,100,100,65,97,90.52,Flourishing
+24,Cucu mengirim foto kegiatan sekolah,a_nar,100,68,100,100,65,100,90.97,Flourishing
+25,Mendapat undangan kegiatan komunitas,a_com,100,68,100,100,76,100,92.4,Flourishing
+26,Mengenang pasangan yang telah meninggal,a_spi,98,69,96,100,76,97,90.85,Flourishing
+27,Badan terasa lemah,a_prac,96,69,96,100,75,96,90.13,Flourishing
+28,Hari biasa tanpa kejadian khusus,a_nar,99,69,95,99,74,97,90.45,Flourishing
+29,Anak tidak menelepon hari ini,a_rel,98,69,94,99,74,96,89.88,Flourishing
+30,Diminta memberi nasihat oleh cucu,a_con,100,69,99,100,74,98,91.78,Flourishing
