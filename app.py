@@ -78,7 +78,14 @@ if test_clicked or refresh_clicked:
         st.session_state["available_models"] = models
 
         if st.session_state["selected_model"] not in models:
-            st.session_state["selected_model"] = models[0]
+            tagged_default = next(
+                (
+                    model_name for model_name in models
+                    if model_name.startswith(f"{DEFAULT_OLLAMA_MODEL}:")
+                ),
+                None,
+            )
+            st.session_state["selected_model"] = tagged_default or models[0]
 
         st.sidebar.success(f"Ollama terhubung. {len(models)} model ditemukan.")
     else:
@@ -352,6 +359,15 @@ if page == "Story Companion":
         st.dataframe(stories_df, width="stretch")
     else:
         st.info("Belum ada cerita tersimpan.")
+
+    st.divider()
+
+    if os.path.exists("data/telegram_stories.csv"):
+        st.subheader("Cerita Masuk dari Telegram")
+        telegram_df = pd.read_csv("data/telegram_stories.csv")
+        st.dataframe(telegram_df, use_container_width=True)
+    else:
+        st.info("Belum ada cerita dari Telegram.")
 
 
 # =========================

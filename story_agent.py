@@ -3,7 +3,7 @@ import requests
 import time
 
 DEFAULT_OLLAMA_URL = "http://100.112.221.112:11434"
-DEFAULT_OLLAMA_MODEL = "gemma4"
+DEFAULT_OLLAMA_MODEL = "llama3.2"
 
 
 def call_ollama(
