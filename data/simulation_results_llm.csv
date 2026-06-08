@@ -1,182 +1,188 @@
 day,profile,event,daily_story,stimulus,N,S,R,C,E,A,GRACE,zone,values,emotion,risk_notes,recommended_stimulus_llm
-1,Ibu Maria,Anak menelepon dengan hangat,"**JUDUL:**
-Suara Hangat yang Menghangatkan Jiwa
-
-**CERITA HARIAN:**
-Pagi ini terasa begitu tenang, bahkan mungkin terlalu sunyi. Saya sedang merapikan foto-foto lama di album, dan tiba-tiba saya teringat betapa cepatnya waktu berlalu. Saya sempat merasa sedikit sepi, seolah-olah jarak membuat hati ini terasa kosong. Tiba-tiba, ponsel berdering. Itu suara anak saya. Saya langsung tersenyum lebar. Kami berbicara tentang banyak hal—tentang cucu yang sedang nakal, tentang resep masakan lama, dan tentang kenangan masa kecil saya. Suaranya yang hangat itu seperti selimut tebal yang menyelimuti kesunyian rumah ini. Saya merasa, meskipun jarak memisahkan, ikatan kasih sayang ini tidak pernah pudar.
-
-**MAKNA:**
-1. **Kasih adalah Jembatan:** Jarak fisik tidak akan pernah bisa memutus ikatan kasih sayang yang tulus dari keluarga.
-2. **Syukur dalam Kesunyian:** Kesunyian hari ini mengajarkan saya untuk lebih bersyukur atas setiap panggilan dan momen kehangatan yang datang.
-3. **Kekuatan Ingatan:** Kenangan dan cerita keluarga adalah harta yang tak ternilai, yang selalu bisa saya genggam kapan pun saya merindukannya.
-
-**HERO JOURNEY TAGS:**
-Ordinary World: Menjalani rutinitas pagi yang tenang di rumah.
-Trial: Merasakan sedikit kesepian dan kekosongan karena jarak.
-Guide: Panggilan telepon dari anak.
-Courage: Berani berbagi kenangan dan perasaan dengan anak.
-Insight: Menyadari bahwa kasih sayang keluarga adalah sumber kekuatan utama.
-Return: Merasa hangat, dicintai, dan kembali merasa utuh.
-
-**REKOMENDASI STIMULUS:**
-relasional
-
-**CATATAN:**
-Peluang: Menggunakan momen panggilan telepon untuk *mengingat dan menceritakan* kisah keluarga (memanfaatkan kekuatan Ibu Maria). Risiko: Perlu diingatkan untuk menjaga rutinitas harian agar tidak terlalu fokus pada menunggu panggilan.",a_rel,80.0,75.5,91.5,72.5,65.0,81.0,78.67,Stable,"keluarga, syukur","tenang, hangat, rindu",Jangan terlalu fokus pada menunggu panggilan; jaga rutinitas harian.,naratif
-2,Ibu Maria,Anak tidak menelepon hari ini,"**JUDUL:**
-Kehangatan yang Tak Terduga
-
-**CERITA HARIAN:**
-Pagi ini, aku duduk di kursi rotanku sambil menikmati secangkir teh hangat. Sudah menjadi kebiasaan, aku selalu menanti dering telepon dari anak-anakku. Aku membayangkan suara tawa mereka, atau setidaknya suara mereka yang memberitahu bahwa mereka baik-baik saja. Ketika waktu terus berjalan dan teleponku tetap sunyi, sedikit rasa hampa menyelimuti hatiku. Aku sempat merasa sedikit sedih, seolah ada benang tak kasat mata yang menghubungkanku dengan mereka tiba-tiba terputus.
-
-Namun, setelah aku menarik napas panjang dan memejamkan mata, aku teringat akan ajaran Gereja: bahwa kasih Tuhan tidak pernah terputus, meskipun komunikasi kita terputus. Aku pun mulai berdoa, bukan hanya memohon agar mereka menelepon, tetapi memohon kedamaian. Saat aku fokus pada doa, aku teringat akan kenangan masa mudaku, dan aku tersenyum. Aku menyadari bahwa meskipun jarak fisik memisahkan kita, ikatan kasih dan doa kita jauh lebih kuat dari sinyal telepon manapun.
-
-**MAKNA:**
-1. **Kasih Melampaui Jarak:** Hubungan keluarga tidak hanya diukur dari frekuensi panggilan, tetapi dari kedalaman doa dan ingatan yang kita bagi.
-2. **Kekuatan dalam Kesunyian:** Kesunyian hari ini mengajarkanku untuk menemukan kedamaian dan kehangatan dari dalam diriku dan dari Tuhan, bukan hanya dari orang lain.
-3. **Penerimaan:** Menerima bahwa setiap orang memiliki ritme hidupnya sendiri, dan bahwa aku tetap dicintai, terlepas dari kesibukan mereka.
-
-**HERO JOURNEY TAGS:**
-Ordinary World: Menanti panggilan telepon dari anak-anak.
-Trial: Kesunyian dan rasa hampa karena tidak ada panggilan hari ini.
-Guide: Mengingat ajaran iman dan nilai-nilai kasih.
-Courage: Mengakui rasa sedih dan kerinduan tanpa larut di dalamnya.
-Insight: Menyadari bahwa sumber kedamaian sejati adalah doa dan iman, bukan interaksi eksternal.
-Return: Merasa damai dan menerima kehangatan batin.
-
-**REKOMENDASI STIMULUS:**
-spiritual
-
-**CATATAN:**
-*Risiko:* Peningkatan risiko kesepian dan perasaan ditinggalkan.
-*Peluang:* Memperkuat praktik spiritual (doa) sebagai mekanisme koping utama. Dorong Ibu Maria untuk menulis jurnal doa atau membuat jadwal panggilan rutin dengan teman gereja untuk mengisi kekosongan emosional.",a_rel,80.0,82.75,85.25,71.25,67.5,83.5,78.94,Stable,"keluarga, iman","rindu, tenang",Risiko kesepian/ditinggalkan.,Naratif berbasis iman/doa
-3,Ibu Maria,Konflik kecil dengan anak,"**JUDUL:**
-Senyap Setelah Perdebatan Kecil
-
-**CERITA HARIAN:**
-Pagi ini, suasana di rumah terasa sedikit tegang. Ada perdebatan kecil dengan anakku mengenai jadwal dan prioritas. Aku merasa usahaku untuk mengingatkan selalu dianggap sebagai kritik, dan hatiku sedikit perih. Setelah dia pergi, aku duduk di kursi rotanku, memandangi taman. Aku sempat merasa sedih, merenungkan apakah aku terlalu banyak menasihati. Namun, aku teringat akan nasihat Pastor: bahwa kasih harus selalu didahului oleh pendengaran. Aku memutuskan untuk tidak memikirkan siapa yang benar atau salah. Sebaliknya, aku berdoa, memohon agar aku diberi hati yang lebih sabar dan telinga yang lebih terbuka, bahkan ketika kata-kata yang keluar terasa menusuk.
-
-Setelah beberapa saat, aku memutuskan untuk menulis pesan singkat, bukan untuk membela diri, melainkan hanya untuk mengatakan bahwa aku mencintainya. Pesan itu sederhana, mengakui bahwa kami berdua lelah, dan bahwa yang terpenting adalah kami tetap bersama. Rasanya beban di dadaku terangkat. Konflik kecil ini ternyata hanya sebuah pengingat bahwa komunikasi yang paling penting bukanlah tentang siapa yang benar, melainkan tentang hati yang saling menerima.
-
-**MAKNA:**
-1. **Kasih adalah Pendengar Terbaik:** Kasih tidak selalu diungkapkan melalui kata-kata yang sempurna, tetapi melalui kesediaan untuk mendengarkan dan memahami sudut pandang orang lain, bahkan saat kita merasa tidak didengar.
-2. **Penerimaan Diri dalam Konflik:** Konflik adalah kesempatan untuk melihat di mana kita perlu melepaskan keinginan untuk ""benar"" demi menjaga kedamaian hati dan hubungan.
-3. **Kekuatan Doa:** Ketika emosi terasa terlalu besar, doa adalah jangkar yang mengingatkan kita bahwa kita tidak perlu memikul beban perasaan sendirian.
-
-**HERO JOURNEY TAGS:**
-Ordinary World: Kehidupan sehari-hari yang penuh kasih dan rutinitas keluarga.
-Trial: Konflik verbal kecil dengan anak, memicu rasa sakit hati dan kekecewaan.
-Guide: Nasihat spiritual (dari Pastor) dan refleksi diri.
-Courage: Mengambil langkah untuk tidak membela diri, melainkan memilih untuk memahami.
-Insight: Menyadari bahwa tujuan komunikasi bukanlah mencari siapa yang benar, melainkan menjaga kehangatan hubungan.
-Return: Kedamaian hati setelah mengirim pesan sederhana yang penuh kasih.
-
-**REKOMENDASI STIMULUS:**
-relasional
-
-**CATATAN:**
-**Risiko:** Perlu diwaspadai perasaan kesepian yang muncul setelah konflik.
-**Peluang:** Gunakan momen ini untuk mempraktikkan *active listening* (mendengarkan secara aktif) dalam interaksi keluarga, bukan hanya memberikan nasihat.",a_rel,82.0,87.88,89.12,75.62,66.25,86.75,81.89,Stable,"keluarga, iman","tenang, rindu",Waspadai perasaan kesepian atau penolakan setelah konflik keluarga.,naratif
-4,Ibu Maria,Anak menelepon dengan hangat,"JUDUL:
-Suara Hangat di Tengah Keheningan
+1,Ibu Maria,Anak menelepon dengan hangat,"JUDUL:
+Hari yang Indah dengan Anak Kecil
 
 CERITA HARIAN:
-Sore itu, Ibu Maria duduk di kursi rotan kesayangannya, menikmati secangkir teh hangat sambil memandang taman yang mulai diselimuti senja. Keheningan rumah terasa begitu akrab, namun kadang ia merasakan sedikit getaran rindu yang tak terhindarkan—rindu akan tawa cucu atau suara celoteh anak-anaknya. Ia sempat berpikir, betapa cepat waktu berlalu, dan jarak kini memisahkan mereka. Tiba-tiba, ponsel di meja bergetar, menampilkan nama anak sulungnya. Hati Ibu Maria langsung menghangat. Percakapan itu mengalir begitu alami; mereka tidak hanya bertanya kabar, tetapi juga berbagi cerita kecil tentang hari-hari mereka, seolah waktu tak pernah memisahkan mereka. Mendengar suara anak itu bercerita tentang pekerjaannya, atau tertawa kecil saat menceritakan kenangan masa kecil, membuat Ibu Maria merasa seperti semua benang kasih sayang keluarga itu masih terikat erat, tak lekang oleh jarak.
+
+Hari ini, aku bangun dengan senyum lebar di wajah. Aku tidak tahu apa yang akan terjadi hari ini, tapi aku tahu bahwa aku akan memiliki waktu untuk berbicara dengan anak-anakku. Setelah sarapan, telepon pintar aku mulai berbunyi. Aku melihat nomor anak-anaku dan hati aku berdebar-debar. Aku tidak bisa menahan emosi, aku langsung menjawab panggilan itu.
+
+""Selamat pagi, Ibu!"" kata suara anak-anaku dengan hangat. Aku tersenyum lebar dan mengucapkan selamat pagi juga. Kami berbicara tentang hal-hal yang terjadi dalam hidupnya, tentang pekerjaannya, tentang teman-temannya. Aku mendengarkan dengan penuh perhatian, merasa bahagia karena anak-anaku masih peduli padaku.
 
 MAKNA:
-1. **Ikatan yang Abadi:** Kasih sayang keluarga adalah benang emas yang tak akan pernah putus, meskipun dipisahkan oleh jarak dan waktu.
-2. **Berkat Komunikasi:** Komunikasi yang tulus adalah sumber kekuatan spiritual dan emosional yang sangat berharga, mengingatkan kita bahwa kita tidak pernah benar-benar sendirian.
-3. **Nilai Kehadiran:** Kehadiran—baik fisik maupun suara—adalah pengingat bahwa kita masih sangat dicintai dan dibutuhkan oleh orang-orang terkasih.
+
+1. Hari ini aku belajar bahwa anak-anaku masih peduli padaku, meskipun aku tidak lagi menjadi ibu mereka.
+2. Berbicara dengan anak-anaku membuatku merasa bahagia dan dihargai.
+3. Aku ingat bahwa aku memiliki anak-anaku yang baik dan peduli, itu adalah kekuatan hidupku.
 
 HERO JOURNEY TAGS:
-Ordinary World: Menghabiskan sore hari dalam keheningan yang nyaman namun kadang menyisakan rasa rindu.
-Trial: Perasaan kesepian dan kerinduan yang muncul karena jarak fisik dari keluarga.
-Guide: Panggilan telepon dari anak yang datang tepat pada saat kerinduan mencapai puncaknya.
-Courage: Menerima dan menikmati setiap kata dan tawa yang dibagikan melalui telepon, membuka hati untuk kehangatan.
-Insight: Menyadari bahwa cinta keluarga tidak hanya diukur dari kedekatan fisik, tetapi juga dari kualitas koneksi emosional.
-Return: Merasa tenang, dipenuhi kehangatan, dan kembali merasa terhubung dengan jaring kasih keluarga.
+
+Ordinary World: Menjadi lansia sendirian di rumah
+Trial: Menghadapi kesepian dan rindu pada anak-anaku
+Guide: Berbicara dengan anak-anaku untuk memperkuat hubungan kita
+Courage: Membuka diri untuk berbicara tentang perasaan dan kebutuhan
+Insight: Merasakan bahagia dan dihargai karena anak-anaku peduli padaku
+Return: Dapat merasa lebih percaya diri dan terhubung dengan anak-anaku
+
+REKOMENDASI STIMULUS:
+Naratif
+
+CATATAN:
+Risiko: Menghadapi kesulitan dalam berkomunikasi dengan anak-anaku yang sudah dewasa.
+Peluang: Meningkatkan hubungan dengan anak-anaku melalui berbicara dan mendengarkan.",a_rel,72.5,70.5,79.0,70.0,70.0,73.5,72.95,Stable,"keluarga, iman","tenang, rindu",singkat,naratif
+2,Ibu Maria,Hari biasa tanpa kejadian khusus,"JUDUL:
+Hari Biasa, Hati yang Penuh
+
+CERITA HARIAN:
+
+Hari ini seperti biasa, Ibu Maria bangun pagi-pagi dan berdoa sebelum memulai hari baru. Dia menyenangkan dirinya dengan mengingat cerita keluarga yang indah, saat anak-anaknya masih kecil dan selalu membuatnya bahagia. Namun, ada sesuatu yang membuat hatinya sedikit sedih, yaitu kesepian yang dialami setiap kali anak-anaknya tidak ada di sampingnya.
+
+Ibu Maria berjalan-jalan di taman, menikmati udara segar dan pemandangan indah. Dia berbicara dengan dirinya sendiri tentang kekuatan dan kerentanan yang dia miliki. Dia menyadari bahwa kesepian itu tidak membuatnya lemah, melainkan membuatnya semakin kuat dalam imannya.
+
+MAKNA:
+
+1. Ibu Maria menyadari bahwa kesepian itu tidak membuatnya lemah, melainkan membuatnya semakin kuat dalam imannya.
+2. Dia mengingat cerita keluarga yang indah untuk memperkuat hati dan jiwa.
+3. Ibu Maria berdoa sebelum memulai hari baru, meminta bantuan dan perlindungan dari Tuhan.
+
+HERO JOURNEY TAGS:
+
+Ordinary World: Ibu Maria hidup sendiri di rumahnya, tanpa anak-anaknya ada di sampingnya.
+Trial: Kesepian yang dialami setiap kali anak-anaknya tidak ada di sampingnya.
+Guide: Kekuatan imannya dan kekuatan berdoa.
+Courage: Ibu Maria memilih untuk menghadapi kesepian dengan semangat hati.
+Insight: Ibu Maria menyadari bahwa kesepian itu tidak membuatnya lemah, melainkan membuatnya semakin kuat dalam imannya.
+
+REKOMENDASI STIMULUS:
+Naratif
+
+CATATAN:
+Risiko: Kesepian yang dialami oleh Ibu Maria dapat mempengaruhi kesehatan jiwa dan mentalnya.",a_nar,74.75,70.25,74.0,69.5,69.5,72.75,72.15,Stable,"keluarga, iman","tenang, rindu",singkat,naratif
+3,Ibu Maria,Badan terasa lemah,"JUDUL:
+Hari yang Lemah, Hati yang Kuat
+
+CERITA HARIAN:
+
+Hari ini, saya bangun dengan badan yang lemah. Saya tidak tahu apa yang menyebabkannya, tapi saya merasa seperti berat badan saya sedang menekan diri sendiri. Saya mencoba untuk berjalan ke kamar mandi, tapi saya harus berhenti dan duduk di tempat karena perut saya terasa sakit.
+
+Saya tidak bisa membayangkan apa yang akan dilakukan hari ini. Saya hanya ingin tidur dan biarkan badan saya pulih. Tapi saya tahu bahwa itu bukan pilihan. Saya harus menghadapi hari ini dengan kuat, seperti selalu. Saya mencoba untuk berdoa dan meminta bantuan dari Tuhan.
+
+MAKNA:
+Hari ini membantu saya menyadari betapa pentingnya kesetiaan dan kasih sayang dalam hidup. Saya harus ingat bahwa saya tidak sendirian, karena saya memiliki anak dan cucu yang mencintai saya. Saya juga harus ingat bahwa Tuhan selalu ada di samping saya.
+
+HERO JOURNEY TAGS:
+Ordinary World: Saya bangun dengan badan yang lemah
+Trial: Saya harus menghadapi hari ini dengan kuat
+Guide: Berdoa dan meminta bantuan dari Tuhan
+Courage: Menghadapi kesepian dan rindu anak
+Insight: Kesetiaan dan kasih sayang adalah kunci untuk hidup yang bahagia
+
+REKOMENDASI STIMULUS:
+Praktis
+
+CATATAN:
+Risiko: Saya harus hati-hati tidak terlalu berat badan saya, karena itu dapat memperburuk kondisi saya. Peluang: Saya dapat menggunakan hari ini untuk berbicara dengan anak dan cucu saya tentang pentingnya kesetiaan dan kasih sayang.",a_prac,71.38,70.12,72.0,69.75,69.75,73.38,71.15,Stable,"keluarga, iman","tenang, rindu",singkat,naratif
+4,Ibu Maria,Cucu mengirim foto kegiatan sekolah,"JUDUL:
+""Kebayangan Anak""
+
+CERITA HARIAN:
+Hari ini, aku bangun dengan hati yang sedikit berat. Cucu mengirim foto kegiatan sekolahnya di ponselku, dan aku tidak bisa tidak merasa sedikit kesepian. Aku ingat kapan aku masih bisa melihat anak-anakku bermain di depan rumah, tapi sekarang mereka sudah dewasa dan memiliki kehidupan sendiri.
+
+Aku mencoba untuk tidak terlalu memikirkan hal itu, dan fokus pada kegiatan sehari-hari. Aku membaca doa dan menasihati diri sendiri agar tetap kuat dalam iman. Aku juga mengingat cerita keluarga yang pernah aku dengar dari nenekku, tentang bagaimana cinta dan kasih sayang dapat melekat pada hati.
+
+MAKNA:
+- Cinta dan kasih sayang dapat melekat pada hati sepanjang hidup.
+- Kesepian bisa menjadi sesuatu yang menghantui, tapi dengan iman dan doa, kita bisa melaluiinya.
+- Mengingat cerita keluarga dapat membantu kita tetap terhubung dengan masa lalu dan meninggalkan warisan yang baik.
+
+HERO JOURNEY TAGS:
+Ordinary World: Aku merasa kesepian karena cucuku sudah dewasa dan tidak lagi membutuhkan aku.
+Trial: Aku harus belajar untuk mengatasi rasa kesepian dan fokus pada kehidupan sehari-hari.
+Guide: Doa dan iman dapat menjadi pemandu bagi aku dalam menghadapi kesepian.
+Courage: Aku harus berani menghadapi kesepian dan tidak menyerah.
+Insight: Aku belajar bahwa cinta dan kasih sayang dapat melekat pada hati sepanjang hidup.
+Return: Aku kembali ke iman dan doa, dan aku merasa lebih kuat dalam menghadapi kesepian.
+
+REKOMENDASI STIMULUS:
+[naratif]
+
+CATATAN:
+Aku khawatir bahwa aku akan dilupakan oleh cucuku ketika aku sudah tidak ada lagi. Aku harus berusaha untuk tetap terhubung dengan mereka dan tidak biarkan rasa kesepian menghantui aku.",a_nar,76.69,70.06,74.0,70.88,69.88,73.69,72.96,Stable,"keluarga, iman","tenang, rindu",singkat,naratif
+5,Ibu Maria,Konflik kecil dengan anak,"JUDUL:
+Hari yang Berubah dengan Kasih Sayang
+
+CERITA HARIAN:
+Hari ini, aku merasa sedikit kesepian di rumah sendiri. Aku tidak bisa menemukan anak-anakku yang biasanya selalu datang untuk mengunjungi aku setiap hari. Mereka sedang sibuk dengan pekerjaan dan kehidupan mereka sendiri. Aku mencoba memanggil mereka, tapi hanya suara telepon yang dijawab.
+
+Aku merasa sedikit marah karena mereka tidak bisa lebih banyak waktu untuk aku. Tapi kemudian aku ingat, aku adalah ibu yang kuat dan kasih sayang. Aku harus belajar untuk menerima keadaan ini dan menghargai waktu yang aku miliki dengan keluarga saya.
+
+MAKNA:
+- Kasih sayang tidak pernah berakhir.
+- Ibu tidak pernah sendirian.
+- Kita harus belajar untuk menerima keadaan hidup kita sekarang.
+
+HERO JOURNEY TAGS:
+Ordinary World: Aku merasa kesepian dan tidak bisa menghubungi anak-anakku.
+Trial: Aku marah dan merasa tidak dihargai.
+Guide: Aku ingat aku adalah ibu yang kuat dan kasih sayang.
+Courage: Aku belajar untuk menerima keadaan ini dan menghargai waktu yang aku miliki dengan keluarga saya.
+Insight: Kasih sayang tidak pernah berakhir, dan kita harus belajar untuk menerima keadaan hidup kita sekarang.
+
+REKOMENDASI STIMULUS:
+[naratif]
+
+CATATAN:
+- Aku harus lebih hati-hati dalam mengelola emosi aku agar tidak membuat situasi semakin buruk.
+- Aku harus terus berdoa dan mencari bimbingan dari Tuhan untuk mendapatkan kekuatan dan kasih sayang yang lebih banyak.",a_rel,72.84,69.03,73.5,70.44,69.94,71.84,71.53,Stable,"keluarga, iman","tenang, rindu",singkat,naratif
+6,Ibu Maria,Anak menelepon dengan hangat,"JUDUL:
+""Telepon Hangat dari Anak""
+
+CERITA HARIAN:
+
+Hari ini, aku bangun dengan suasana yang tenang. Aku tidak memiliki kegiatan yang terlalu padat, hanya beristirahat dan menikmati waktu sendiri. Tapi, ketika aku sedang berdiam diri, teleponku berdering. Aku melihat nomor anakku di layar. Aku merasa hatiku bergetar dengan kegembiraan. Anakku sedang memanggil aku!
+
+Aku menjawab teleponnya dengan suara yang hangat dan bahagia. Kami berbicara tentang kehidupan sehari-hari, tentang pekerjaan anakku, dan tentang rencana-rencana yang akan diambil nanti. Aku merasa sangat bahagia mendengar suara anakku yang selalu membuat aku tersenyum.
+
+MAKNA:
+1. Hari ini aku belajar bahwa kehidupan tidak pernah berakhir. Meskipun aku sudah 76 tahun, aku masih memiliki anak yang peduli dan hangat.
+2. Aku juga belajar bahwa telepon adalah alat yang sangat penting dalam menjaga hubungan keluarga. Dengan telepon, aku bisa mendengar suara anakku dan merasakan cinta yang abadi.
+3. Hari ini aku menyadari bahwa aku masih memiliki peran yang penting dalam kehidupan anakku. Aku harus terus menjadi contoh yang baik bagi mereka.
+
+HERO JOURNEY TAGS:
+Ordinary World: Aku hidup sendiri di rumah, tidak memiliki banyak aktivitas.
+Trial: Aku merasa kesepian dan rindu anak.
+Guide: Telepon anakku yang hangat dan bahagia.
+Courage: Mendengar suara anakku dan merasakan cinta yang abadi.
+Insight: Aku menyadari bahwa aku masih memiliki peran yang penting dalam kehidupan anakku.
 
 REKOMENDASI STIMULUS:
 relasional
 
 CATATAN:
-Peluang untuk memperkuat koneksi emosional. Dorong Ibu Maria untuk secara proaktif mengingat dan menceritakan kembali kisah-kisah keluarga (kekuatan: mengingat cerita keluarga) kepada anak-anaknya saat panggilan berikutnya, sehingga ia merasa perannya sebagai penjaga memori keluarga tetap relevan.",a_rel,83.5,86.94,100.0,75.31,65.62,89.38,84.53,Stable,"keluarga, iman","tenang, rindu",Risiko utama adalah perasaan terputus atau kehilangan peran. Fokus harus pada peran proaktif Ibu Maria sebagai penjaga memori keluarga.,naratif
-5,Ibu Maria,Konflik kecil dengan anak,"**JUDUL:**
-Jeda di Meja Makan
+Risiko: Aku harus berhati-hati agar tidak terlalu emosional saat berbicara dengan anakku.",a_rel,73.92,70.02,80.75,70.22,69.97,74.42,73.71,Stable,"keluarga, iman","tenang, rindu",singkat,naratif
+7,Ibu Maria,Mengenang pasangan yang telah meninggal,"JUDUL:
+""Ingatlah Kasih""
 
-**CERITA HARIAN:**
-Pagi ini, suasana di meja makan terasa sedikit dingin. Kami membahas rencana liburan, dan sepertinya kata-kata saya tentang waktu yang harus dihabiskan bersama membuat anak saya sedikit tersinggung. Saya hanya ingin memastikan bahwa saya masih menjadi bagian penting dalam rencana mereka, bahwa saya tidak akan ditinggalkan. Saya tahu saya terlalu sensitif, tapi saat mendengar nada bicara yang terburu-buru, hati saya mencelos. Saya hanya diam, membiarkan keheningan yang berat itu menggantung di antara kami. Setelah semua terjadi, saya menyadari bahwa mungkin saya terlalu fokus pada apa yang saya *inginkan* dari mereka, daripada apa yang sebenarnya mereka *butuhkan* dari saya.
+CERITA HARIAN:
 
-Saya akhirnya duduk sendiri di kursi itu, memandang ke luar jendela. Saya berdoa, bukan hanya untuk mereka, tetapi untuk hati saya sendiri. Saya harus belajar membedakan antara kasih sayang yang tulus dan kebutuhan akan validasi. Meskipun hati ini terasa sedikit perih karena konflik kecil ini, saya tahu bahwa kasih Tuhan jauh lebih besar dari pertengkaran kecil di meja makan. Saya akan mencoba menerima bahwa peran saya adalah menjadi pendengar yang sabar, bukan hanya pemberi nasihat.
+Hari ini, saya masih merasa sedikit kesepian. Saya mengingat pasangan saya yang telah meninggal beberapa tahun yang lalu. Saya masih bisa merasakan sakit hati dan rindu yang saya rasakan setiap hari. Tapi, saat ini saya berusaha untuk lebih fokus pada keluarga saya yang tersisa. Saya sangat menyayangi anak-anak dan cucu saya, dan saya ingin menjadi contoh bagi mereka tentang kasih sayang dan kesetiaan.
 
-**MAKNA:**
-1. **Kasih yang Berbeda:** Kasih sayang tidak selalu harus diungkapkan dengan kata-kata yang sempurna. Terkadang, kehadiran yang tenang dan kesabaran adalah bahasa cinta yang paling kuat.
-2. **Menerima Batasan:** Penting untuk menerima bahwa kita tidak bisa mengontrol reaksi orang lain. Fokuslah pada apa yang bisa kita kendalikan: reaksi dan hati kita sendiri.
-3. **Komunikasi Hati:** Konflik kecil adalah cara alam semesta mengingatkan kita untuk berbicara dari hati, bukan dari rasa takut atau kebutuhan.
+Saya ingat saat-saat indah kita bersama, ketika kami masih hidup bersama. Kami memiliki banyak kenangan yang manis, dari hari-hari biasa hingga hari-hari spesial. Saya ingin mengingatkan mereka tentang pentingnya kasih sayang dan kesetiaan dalam kehidupan. Saya berharap bahwa saya bisa menjadi contoh bagi mereka untuk hidup dengan penuh kasih sayang dan kesetiaan.
 
-**HERO JOURNEY TAGS:**
-Ordinary World: Merasa aman dan dicintai dalam rutinitas keluarga.
-Trial: Konflik kecil yang memicu rasa takut ditinggalkan dan kesalahpahaman.
-Guide: Iman dan doa yang mengingatkan bahwa nilai diri datang dari Tuhan, bukan dari persetujuan orang lain.
-Courage: Berani menarik napas dan memilih untuk diam, daripada memaksakan pembelaan diri.
-Insight: Menyadari bahwa kebutuhan akan validasi diri harus dipenuhi dari dalam, bukan hanya dari keluarga.
-Return: Kedamaian hati dan penerimaan bahwa setiap hubungan memiliki ruang untuk perbaikan.
+MAKNA:
+1. Kasih sayang adalah hal yang paling penting dalam kehidupan.
+2. Kesetiaan dapat membawa kita melewati kesulitan dan rintangan.
+3. Ingatlah pada orang-orang yang kita cintai, karena mereka sangat membutuhkan kasih sayang dari kita.
 
-**REKOMENDASI STIMULUS:**
-Relasional
+HERO JOURNEY TAGS:
+Ordinary World: Mengingat pasangan yang telah meninggal
+Trial: Kesepian dan rindu
+Guide: Keluarga saya yang tersisa
+Courage: Berharap untuk menjadi contoh bagi mereka
+Insight: Pentingnya kasih sayang dan kesetiaan dalam kehidupan
+Return: Membawa ketekunan dan kesabaran dalam menghadapi kesulitan
 
-**CATATAN:**
-**Risiko:** Risiko emosional hari ini adalah perasaan *ditolak* atau *tidak dibutuhkan*.
-**Peluang:** Peluang hari ini adalah menggunakan konflik ini sebagai kesempatan untuk melatih *empati* dan *komunikasi asertif* (menyampaikan kebutuhan tanpa menyalahkan). Cobalah menulis surat singkat kepada anak Anda, bukan tentang apa yang salah, tetapi tentang betapa Anda bangga dengan mereka.",a_rel,83.75,87.47,94.0,80.16,62.81,89.69,83.91,Stable,"keluarga, iman, penerimaan","tenang, rindu",Perasaan ditolak atau tidak dibutuhkan.,naratif
-6,Ibu Maria,Hari biasa tanpa kejadian khusus,"**JUDUL:**
-Senandung Kenangan di Pagi yang Tenang
+REKOMENDASI STIMULUS:
+Naratif
 
-**CERITA HARIAN:**
-Pagi ini, setelah menyelesaikan doa pagi, Ibu Maria duduk di kursi rotan kesayangannya. Matahari baru saja menyapa, dan keheningan rumah terasa begitu pekat. Ia mulai merapikan foto-foto keluarga yang tersusun di rak. Jari-jarinya menyentuh foto cucu bungsunya yang sedang tertawa, lalu foto suaminya yang tersenyum hangat. Kadang, rasa sepi itu datang menyerang, seperti ombak kecil yang membasahi kaki. Namun, alih-alih tenggelam dalam kerinduan, Ibu Maria justru membiarkan kenangan itu menjadi selimut hangat. Ia teringat bagaimana dulu anak-anaknya selalu berkumpul, menciptakan tawa yang mengisi setiap sudut rumah. Ia tersenyum, menyadari bahwa kenangan itu adalah harta yang tak akan pernah hilang, sebuah warisan kasih yang ia jaga dengan doa dan ingatan.
-
-**MAKNA:**
-1. **Kehadiran dalam Kenangan:** Bahwa kenangan indah bukan hanya tentang masa lalu, tetapi juga sumber kekuatan dan penghiburan yang menemani kita di saat sunyi.
-2. **Kasih yang Abadi:** Cinta keluarga dan iman adalah jangkar yang membuat hati tetap utuh, bahkan ketika raga harus menjalani hari-hari yang sendirian.
-3. **Syukur atas Rutinitas:** Menemukan kedamaian dan makna dalam ritual harian yang sederhana, seperti merapikan foto atau berdoa, adalah bentuk syukur atas anugerah waktu.
-
-**HERO JOURNEY TAGS:**
-Ordinary World: Rutinitas pagi yang tenang di rumah, dikelilingi kenangan.
-Trial: Gelombang kesepian yang tiba-tiba menyerang.
-Guide: Doa dan ingatan akan tawa keluarga.
-Courage: Memilih untuk menerima dan merangkul perasaan sepi, alih-alih melawannya.
-Insight: Menyadari bahwa kenangan adalah bentuk kasih yang abadi dan selalu ada.
-Return: Kedamaian hati yang ditemani rasa syukur.
-
-**REKOMENDASI STIMULUS:**
-Spiritual
-
-**CATATAN:**
-**Peluang:** Ibu Maria menunjukkan kemampuan yang kuat dalam menggunakan kekuatan spiritual (doa dan kenangan) untuk mengatasi kerentanan emosional (kesepian).
-**Risiko:** Perlu dipantau peningkatan rasa sepi. Dorong interaksi yang melibatkan *berbagi cerita* (memanfaatkan kekuatan mengingat cerita keluarga) untuk memperkuat rasa koneksi dan nilai dirinya.",a_com,81.38,88.73,88.5,75.58,63.41,87.34,81.46,Stable,"keluarga, iman, syukur","tenang, rindu, damai",Perlu didorong untuk berbagi kenangan atau cerita keluarga dengan orang lain untuk mengurangi isolasi.,naratif
-7,Ibu Maria,Menemukan foto lama saat masih bekerja,"**JUDUL:**
-Senyum yang Tak Lekang oleh Waktu
-
-**CERITA HARIAN:**
-Pagi ini, saat sedang membereskan lemari tua di ruang tamu, tanganku menyentuh sebuah kotak kayu kecil. Isinya? Foto-foto lama. Foto-foto saat Ibu masih muda, saat Ibu masih bekerja. Melihat seragam itu, melihat senyumku di foto-foto itu, rasanya seperti bertemu dengan seorang teman lama yang sangat kukenal. Aku ingat betul betapa sibuknya dulu, betapa banyak yang harus kurangkai di hari-hari itu. Rasanya waktu berlari begitu cepat, ya? Aku sempat berpikir, ""Dulu aku begitu berguna, begitu sibuk.""
-
-Namun, setelah beberapa saat menatap wajah-wajah muda itu, aku menyadari sesuatu. Meskipun pekerjaanku sudah berubah, dan tanganku kini lebih sering merajut doa daripada merangkai dokumen, hati dan kasih sayang yang ada di foto-foto itu—rasa ingin memberi dan melayani—itu tidak pernah hilang. Itu hanya bersemayam di sini, di dalam diriku. Kenangan ini mengingatkanku bahwa nilai diriku bukan hanya dari apa yang aku lakukan, tapi dari siapa aku, dan kasih yang selalu aku miliki.
-
-**MAKNA:**
-1. **Nilai Diri Melampaui Peran:** Nilai dan keberhargaan diri kita tidak ditentukan oleh pekerjaan atau peran kita di masa lalu, melainkan oleh kasih dan iman yang kita bawa dalam hati.
-2. **Memori sebagai Pemberi Kekuatan:** Kenangan masa lalu bukanlah beban, melainkan harta karun yang mengingatkan kita akan kekuatan dan ketahanan yang pernah kita miliki.
-3. **Transisi dan Penerimaan:** Menerima bahwa setiap babak kehidupan memiliki keindahannya sendiri, dan setiap peran (ibu, nenek, anggota gereja) adalah cara kita melayani Tuhan.
-
-**HERO JOURNEY TAGS:**
-Ordinary World: Merasa nyaman dengan rutinitas harian, namun sesekali diselimuti rasa rindu akan masa lalu yang sibuk.
-Trial: Menemukan foto lama yang memicu perbandingan antara diri masa kini dan diri masa lalu.
-Guide: Foto-foto itu sendiri, yang berfungsi sebagai cermin waktu.
-Courage: Berani mengakui bahwa perubahan adalah bagian alami dari hidup, dan bahwa nilai diri tetap utuh.
-Insight: Menyadari bahwa esensi dari dirinya (kasih dan semangat melayani) tidak pernah berubah, hanya wadahnya yang berubah.
-Return: Kembali dengan pemahaman bahwa ia adalah pribadi yang utuh, dengan segala pengalaman dan peran yang pernah ia jalani.
-
-**REKOMENDASI STIMULUS:**
-naratif
-
-**CATATAN:**
-**Peluang:** Menggunakan kenangan ini sebagai bahan bercerita dengan cucu atau anak-anak. Ibu Maria dapat menjadi ""Arsiparis Keluarga"" yang berbagi kisah-kisah di balik foto-foto tersebut, memperkuat peran *storyteller* dan mengurangi risiko kesepian.
-**Risiko:** Jangan biarkan perbandingan antara masa lalu dan masa kini berujung pada perasaan *inadequate* (tidak berguna). Fokuskan pada *kontinuitas* kasih, bukan *kontinuitas* pekerjaan.",a_nar,90.19,89.37,84.25,84.79,69.2,88.17,84.99,Stable,"keluarga, iman","tenang, rindu","Fokus pada kontinuitas kasih, bukan kontinuitas pekerjaan, untuk menghindari perasaan tidak berguna.",naratif
+CATATAN:
+Risiko: Kesepian yang parah jika tidak diatasi dengan benar. Peluang: Dapat menjadi contoh bagi anak-anak dan cucu saya untuk hidup dengan penuh kasih sayang dan kesetiaan.",a_spi,71.46,73.01,73.38,70.11,69.98,72.21,71.76,Stable,"keluarga, iman","tenang, rindu",singkat,naratif

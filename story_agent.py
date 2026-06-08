@@ -1,6 +1,6 @@
 import json
 import requests
-
+import time
 
 DEFAULT_OLLAMA_URL = "http://100.112.221.112:11434"
 DEFAULT_OLLAMA_MODEL = "gemma4"
@@ -315,3 +315,90 @@ def generate_simulated_daily_story(
 ) -> str:
     prompt = build_simulated_daily_story_prompt(profile, event_name, grace_before)
     return call_ollama(prompt, ollama_url=ollama_url, model=model)
+
+def benchmark_ollama(
+    ollama_url: str = DEFAULT_OLLAMA_URL,
+    model: str = DEFAULT_OLLAMA_MODEL,
+    prompt: str | None = None
+) -> dict:
+    """
+    Mengukur kecepatan Ollama untuk model aktif.
+
+    Ollama mengembalikan durasi dalam nanosecond.
+    Output token/sec = eval_count / eval_duration * 1e9
+    Prompt token/sec = prompt_eval_count / prompt_eval_duration * 1e9
+    """
+    if prompt is None:
+        prompt = (
+            "Tuliskan satu paragraf pendek dalam bahasa Indonesia tentang "
+            "seorang lansia yang menemukan makna dari hari yang sederhana."
+        )
+
+    ollama_url = ollama_url.rstrip("/")
+    url = f"{ollama_url}/api/generate"
+
+    payload = {
+        "model": model,
+        "prompt": prompt,
+        "stream": False,
+        "options": {
+            "temperature": 0.2,
+            "num_predict": 120
+        }
+    }
+
+    start_time = time.time()
+
+    try:
+        response = requests.post(url, json=payload, timeout=180)
+        wall_time = time.time() - start_time
+
+        response.raise_for_status()
+        data = response.json()
+
+        eval_count = data.get("eval_count", 0) or 0
+        eval_duration = data.get("eval_duration", 0) or 0
+
+        prompt_eval_count = data.get("prompt_eval_count", 0) or 0
+        prompt_eval_duration = data.get("prompt_eval_duration", 0) or 0
+
+        total_duration = data.get("total_duration", 0) or 0
+        load_duration = data.get("load_duration", 0) or 0
+
+        output_tokens_per_sec = (
+            eval_count / eval_duration * 1_000_000_000
+            if eval_count > 0 and eval_duration > 0
+            else 0
+        )
+
+        prompt_tokens_per_sec = (
+            prompt_eval_count / prompt_eval_duration * 1_000_000_000
+            if prompt_eval_count > 0 and prompt_eval_duration > 0
+            else 0
+        )
+
+        return {
+            "ok": True,
+            "server": ollama_url,
+            "model": model,
+            "wall_time_sec": round(wall_time, 3),
+            "total_duration_sec": round(total_duration / 1_000_000_000, 3),
+            "load_duration_sec": round(load_duration / 1_000_000_000, 3),
+            "prompt_eval_count": prompt_eval_count,
+            "prompt_eval_duration_sec": round(prompt_eval_duration / 1_000_000_000, 3),
+            "prompt_tokens_per_sec": round(prompt_tokens_per_sec, 2),
+            "eval_count": eval_count,
+            "eval_duration_sec": round(eval_duration / 1_000_000_000, 3),
+            "output_tokens_per_sec": round(output_tokens_per_sec, 2),
+            "response_preview": data.get("response", "")[:500],
+            "raw": data
+        }
+
+    except Exception as e:
+        return {
+            "ok": False,
+            "server": ollama_url,
+            "model": model,
+            "error": str(e)
+        }
+    

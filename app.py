@@ -6,6 +6,7 @@ from story_agent import (
     generate_simple_story,
     analyze_grace_with_llm,
     get_ollama_models,
+    benchmark_ollama,
     DEFAULT_OLLAMA_URL,
     DEFAULT_OLLAMA_MODEL,
 )
@@ -13,7 +14,7 @@ from grace_core import GraceState, calculate_grace_index, get_zone
 from simulator import run_simulation
 from elder_profiles import ELDER_PROFILES
 from simulator_llm import run_simulation_with_llm
-
+from experiment_runner import run_experiment_suite
 
 # =========================
 # Setup
@@ -29,7 +30,7 @@ st.set_page_config(
 st.title("MyGRACE MiniLab")
 st.caption(
     "Quick win Tahap 2: Story Companion + Digital Twin Simulator "
-    "+ Ollama LLM + LLM Daily Story"
+    "+ Ollama LLM + LLM Daily Story + Ollama Benchmark"
 )
 
 
@@ -41,7 +42,7 @@ st.sidebar.title("Navigasi")
 
 page = st.sidebar.radio(
     "Pilih halaman",
-    ["Story Companion", "Digital Twin Simulator"]
+    ["Story Companion", "Digital Twin Simulator",  "Experiment Dashboard"]
 )
 
 st.sidebar.divider()
@@ -106,6 +107,102 @@ st.session_state["selected_model"] = selected_model
 
 st.sidebar.caption(f"Server aktif: `{ollama_url}`")
 st.sidebar.caption(f"Model aktif: `{selected_model}`")
+
+
+# =========================
+# Sidebar: Ollama Benchmark
+# =========================
+
+st.sidebar.divider()
+st.sidebar.subheader("Ollama Speed Test")
+
+benchmark_prompt = st.sidebar.text_area(
+    "Prompt benchmark",
+    value=(
+        "Tuliskan satu paragraf pendek dalam bahasa Indonesia tentang "
+        "seorang lansia yang menemukan makna dari hari yang sederhana."
+    ),
+    height=100
+)
+
+if st.sidebar.button("Benchmark Ollama"):
+    with st.sidebar.spinner("Mengukur kecepatan Ollama..."):
+        bench = benchmark_ollama(
+            ollama_url=ollama_url,
+            model=selected_model,
+            prompt=benchmark_prompt
+        )
+
+    if bench.get("ok"):
+        benchmark_row = {
+            "server": bench["server"],
+            "model": bench["model"],
+            "wall_time_sec": bench["wall_time_sec"],
+            "total_duration_sec": bench["total_duration_sec"],
+            "load_duration_sec": bench["load_duration_sec"],
+            "prompt_eval_count": bench["prompt_eval_count"],
+            "prompt_tokens_per_sec": bench["prompt_tokens_per_sec"],
+            "eval_count": bench["eval_count"],
+            "output_tokens_per_sec": bench["output_tokens_per_sec"],
+        }
+
+        benchmark_path = "data/ollama_benchmark.csv"
+
+        if os.path.exists(benchmark_path):
+            benchmark_df = pd.read_csv(benchmark_path)
+            benchmark_df = pd.concat(
+                [benchmark_df, pd.DataFrame([benchmark_row])],
+                ignore_index=True
+            )
+        else:
+            benchmark_df = pd.DataFrame([benchmark_row])
+
+        benchmark_df.to_csv(benchmark_path, index=False)
+
+        st.sidebar.success("Benchmark selesai.")
+
+        st.sidebar.metric(
+            "Output tokens/sec",
+            bench["output_tokens_per_sec"]
+        )
+
+        st.sidebar.metric(
+            "Prompt tokens/sec",
+            bench["prompt_tokens_per_sec"]
+        )
+
+        st.sidebar.metric(
+            "Wall time/sec",
+            bench["wall_time_sec"]
+        )
+
+        with st.sidebar.expander("Detail benchmark", expanded=False):
+            st.json({
+                "server": bench["server"],
+                "model": bench["model"],
+                "wall_time_sec": bench["wall_time_sec"],
+                "total_duration_sec": bench["total_duration_sec"],
+                "load_duration_sec": bench["load_duration_sec"],
+                "prompt_eval_count": bench["prompt_eval_count"],
+                "prompt_eval_duration_sec": bench["prompt_eval_duration_sec"],
+                "prompt_tokens_per_sec": bench["prompt_tokens_per_sec"],
+                "eval_count": bench["eval_count"],
+                "eval_duration_sec": bench["eval_duration_sec"],
+                "output_tokens_per_sec": bench["output_tokens_per_sec"],
+            })
+
+        with st.sidebar.expander("Preview respons", expanded=False):
+            st.write(bench["response_preview"])
+
+    else:
+        st.sidebar.error(f"Benchmark gagal: {bench.get('error')}")
+
+if os.path.exists("data/ollama_benchmark.csv"):
+    with st.sidebar.expander("Riwayat benchmark", expanded=False):
+        st.dataframe(
+            pd.read_csv("data/ollama_benchmark.csv"),
+            width="stretch"
+        )
 
 
 # =========================
@@ -444,3 +541,137 @@ if page == "Digital Twin Simulator":
             st.dataframe(sim_llm_df, width="stretch")
         else:
             st.info("Belum ada hasil simulasi LLM.")
+
+# =========================
+# Page 3: Experiment Dashboard
+# =========================
+
+if page == "Experiment Dashboard":
+    st.header("Experiment Dashboard")
+    st.write(
+        "Halaman ini membandingkan beberapa kondisi eksperimen: "
+        "Baseline, Story Only, Story + Stimulus, dan Full GRACE LLM."
+    )
+
+    with st.expander("Pengaturan LLM aktif", expanded=False):
+        st.write("Ollama URL:", ollama_url)
+        st.write("Model:", selected_model)
+
+    profile_name = st.selectbox(
+        "Pilih profil digital twin untuk eksperimen",
+        list(ELDER_PROFILES.keys()),
+        key="experiment_profile"
+    )
+
+    selected_profile = ELDER_PROFILES[profile_name]
+
+    with st.expander("Lihat profil digital twin", expanded=False):
+        st.json(selected_profile)
+
+    col_a, col_b, col_c = st.columns(3)
+
+    with col_a:
+        exp_days = st.slider(
+            "Jumlah hari eksperimen",
+            min_value=7,
+            max_value=90,
+            value=30,
+            key="exp_days"
+        )
+
+    with col_b:
+        exp_seed = st.number_input(
+            "Seed eksperimen",
+            value=42,
+            step=1,
+            key="exp_seed"
+        )
+
+    with col_c:
+        include_llm = st.checkbox(
+            "Sertakan Full GRACE LLM",
+            value=False,
+            help=(
+                "Jika dicentang, eksperimen akan memanggil LLM berkali-kali. "
+                "Gunakan 7 hari dulu untuk tes awal."
+            )
+        )
+
+    st.info(
+        "Saran: jalankan dulu tanpa LLM untuk melihat perbandingan cepat. "
+        "Setelah itu centang Full GRACE LLM dengan 7 hari."
+    )
+
+    if st.button("Jalankan Experiment Suite"):
+        with st.spinner("Menjalankan eksperimen..."):
+            all_daily_df, summary_df = run_experiment_suite(
+                profile=selected_profile,
+                days=exp_days,
+                seed=int(exp_seed),
+                include_llm=include_llm,
+                ollama_url=ollama_url,
+                model=selected_model,
+            )
+
+        st.success("Eksperimen selesai.")
+
+        st.subheader("Ringkasan Hasil Eksperimen")
+        st.dataframe(summary_df, width="stretch")
+
+        st.subheader("Perbandingan Average GRACE")
+        avg_chart_df = summary_df.set_index("condition")[["average_grace"]]
+        st.bar_chart(avg_chart_df)
+
+        st.subheader("Perbandingan Stable Days")
+        stable_chart_df = summary_df.set_index("condition")[["stable_days"]]
+        st.bar_chart(stable_chart_df)
+
+        st.subheader("Perbandingan Vulnerable Days")
+        vuln_chart_df = summary_df.set_index("condition")[["vulnerable_days"]]
+        st.bar_chart(vuln_chart_df)
+
+        st.subheader("Kurva GRACE per Hari")
+
+        pivot_df = all_daily_df.pivot_table(
+            index="day",
+            columns="condition",
+            values="GRACE",
+            aggfunc="mean"
+        )
+
+        st.line_chart(pivot_df)
+
+        st.subheader("Data Harian Semua Kondisi")
+        st.dataframe(all_daily_df, width="stretch")
+
+        st.download_button(
+            label="Download Ringkasan Eksperimen CSV",
+            data=summary_df.to_csv(index=False),
+            file_name="experiment_summary.csv",
+            mime="text/csv"
+        )
+
+        st.download_button(
+            label="Download Data Harian CSV",
+            data=all_daily_df.to_csv(index=False),
+            file_name="experiment_daily_results.csv",
+            mime="text/csv"
+        )
+
+    st.divider()
+
+    st.subheader("Hasil Eksperimen Tersimpan")
+
+    if os.path.exists("data/experiment_summary.csv"):
+        saved_summary = pd.read_csv("data/experiment_summary.csv")
+        st.write("Ringkasan terakhir")
+        st.dataframe(saved_summary, width="stretch")
+    else:
+        st.info("Belum ada ringkasan eksperimen tersimpan.")
+
+    if os.path.exists("data/experiment_daily_results.csv"):
+        saved_daily = pd.read_csv("data/experiment_daily_results.csv")
+        st.write("Data harian terakhir")
+        st.dataframe(saved_daily, width="stretch")
+    else:
+        st.info("Belum ada data harian eksperimen tersimpan.")
