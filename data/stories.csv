@@ -1,1 +1,46 @@
-name,story_type,raw_story,narrative,values,prompt
+name,story_type,raw_story,narrative,N,S,R,C,E,A,GRACE,zone,values,emotion,recommended_stimulus,risk_notes,ollama_url,model
+Ibu Maria,Hari ini,"Hari ini saya duduk di teras cukup lama. Anak saya belum menelepon sejak kemarin.
+Saya merasa agak sepi. Tetapi tetangga lewat dan menyapa saya dengan ramah.
+Saya jadi merasa masih diperhatikan.","**JUDUL:**
+Sapaan Hangat di Teras Senja
+
+**NARASI BERMAKNA:**
+Hari ini, Ibu Maria menghabiskan waktu yang tenang di teras. Di tengah keheningan sore, ada rasa sepi yang menyapa, terutama karena belum mendengar kabar dari anak. Namun, waktu seolah ingin mengingatkan Ibu bahwa kehangatan itu masih ada di sekitar. Ketika seorang tetangga lewat dan meluangkan waktu untuk menyapa dengan ramah, momen kecil itu tiba-tiba mengisi ruang hati yang tadinya terasa kosong. Sapaan sederhana itu bukan hanya sekadar ucapan, melainkan pengingat lembut bahwa Ibu Maria masih diperhatikan, masih menjadi bagian penting dari kehidupan komunitas di sekitarnya.
+
+**MAKNA HIDUP:**
+*   **Kekuatan dalam Momen Kecil:** Seringkali, kebahagiaan dan rasa diperhatikan datang dari hal-hal yang paling sederhana, seperti sebuah sapaan ramah.
+*   **Jaringan Komunitas:** Menyadari bahwa kita tidak sendirian. Kehangatan dari tetangga adalah bukti bahwa kita masih terhubung dengan orang-orang di sekitar kita.
+*   **Nilai Menunggu:** Waktu yang dihabiskan di teras mengajarkan kesabaran dan kemampuan untuk menerima kedamaian, meskipun diiringi rasa rindu.
+*   **Martabat Diri:** Ibu Maria tetap menjadi pribadi yang utuh dan berharga, bahkan di saat-saat hening.
+
+**PERTANYAAN LANJUTAN:**
+Bagaimana perasaan Ibu Maria saat melihat senyum ramah dari tetangga itu? Apakah sapaan itu membawa kenangan indah tentang masa lalu?
+
+**SARAN STIMULUS:**
+Relasional (Fokus pada hubungan antarmanusia dan koneksi emosional).
+
+**CATATAN KEHATI-HATIAN:**
+Cerita ini mengandung nuansa kesepian dan kerinduan akan keluarga. Penting untuk diingat bahwa perasaan sepi itu adalah perasaan yang wajar dan valid. Kehangatan dari sapaan tetangga adalah pengingat yang indah bahwa dukungan dan perhatian itu ada di sekitar Ibu Maria.",80.0,75.0,90.0,65.0,85.0,80.0,79.55,Stable,"komunitas, martabat diri","tenang, rindu",Naratif (Fokus pada peran dan koneksi komunitas),Risiko kesepian/isolasi; perlu validasi perasaan rindu.,,
+Ibu Maria,Hari ini,"Hari ini saya terkenang suami saya, saya rindu. Saya berdoa agar kembali dipertemukan ","JUDUL:
+""Rindu yang Abadi""
+
+NARASI BERMAKNA:
+Hari ini saya terkenang suami saya, saya rindu. Saya berdoa agar kembali dipertemukan, tapi saya tidak tahu apakah itu hanya mimpi atau kenyataan. Saya ingat saat kita pertama kali bertemu, senyummu membuatku bahagia, dan hari-hari kita bersama adalah kenangan yang indah. Tapi, seperti semua hal, waktu berlalu dan kita terpisah. Saya masih merindukan senyummu, suara bicaramu, dan pelukanku.
+
+Saya tahu bahwa saya tidak bisa mengubah masa lalu, tapi saya ingin memahami apa yang membuatku terus rindu padamu. Apakah itu karena cinta yang abadi, atau apakah itu hanya kenangan yang indah? Saya tidak tahu, tapi saya ingin terus berdoa agar kembali dipertemukan.
+
+Saya ingat saat kita masih bersama, kita selalu membantu satu sama lain. Saya ingat saat kamu mengobati aku ketika aku sakit, dan saat aku membantumu dalam kesulitan hidup. Kami memiliki cinta yang tulus, dan saya ingin terus merasakannya.
+
+MAKNA HIDUP:
+1. Cinta adalah hal yang abadi, tidak pernah mati.
+2. Kenangan indah dapat membuatku bahagia, tapi juga membuatku rindu.
+3. Saya ingin memahami apa yang membuatku terus rindu padamu.
+
+PERTANYAAN LANJUTAN:
+Apakah kamu memiliki kenangan tentang suami atau pasanganmu yang masih membuatmu bahagia?
+
+SARAN STIMULUS:
+Relasional
+
+CATATAN KEHATI-HATIAN:
+Tidak ada catatan khusus.",70.0,70.0,70.0,70.0,70.0,70.0,70.0,Stable,"keluarga, iman","tenang, rindu",naratif,singkat,http://100.112.221.112:11434,llama3.2:latest
