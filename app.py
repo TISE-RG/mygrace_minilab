@@ -11,6 +11,8 @@ from story_agent import (
 )
 from grace_core import GraceState, calculate_grace_index, get_zone
 from simulator import run_simulation
+from elder_profiles import ELDER_PROFILES
+from simulator_llm import run_simulation_with_llm
 
 
 # =========================
@@ -25,11 +27,14 @@ st.set_page_config(
 )
 
 st.title("MyGRACE MiniLab")
-st.caption("Quick win Tahap 1: Story Companion + Digital Twin Simulator + Ollama LLM")
+st.caption(
+    "Quick win Tahap 2: Story Companion + Digital Twin Simulator "
+    "+ Ollama LLM + LLM Daily Story"
+)
 
 
 # =========================
-# Sidebar: Settings
+# Sidebar: Navigation & Ollama Settings
 # =========================
 
 st.sidebar.title("Navigasi")
@@ -84,9 +89,11 @@ if available_models:
     selected_model = st.sidebar.selectbox(
         "Pilih Model",
         options=available_models,
-        index=available_models.index(st.session_state["selected_model"])
-        if st.session_state["selected_model"] in available_models
-        else 0
+        index=(
+            available_models.index(st.session_state["selected_model"])
+            if st.session_state["selected_model"] in available_models
+            else 0
+        )
     )
 else:
     selected_model = st.sidebar.text_input(
@@ -262,6 +269,20 @@ if page == "Digital Twin Simulator":
         "dan sistem memilih stimulus yang sesuai."
     )
 
+    with st.expander("Pengaturan LLM aktif", expanded=False):
+        st.write("Ollama URL:", ollama_url)
+        st.write("Model:", selected_model)
+
+    profile_name = st.selectbox(
+        "Pilih profil digital twin",
+        list(ELDER_PROFILES.keys())
+    )
+
+    selected_profile = ELDER_PROFILES[profile_name]
+
+    with st.expander("Lihat profil digital twin", expanded=False):
+        st.json(selected_profile)
+
     col_a, col_b = st.columns(2)
 
     with col_a:
@@ -279,16 +300,29 @@ if page == "Digital Twin Simulator":
             step=1
         )
 
-    if st.button("Jalankan Simulasi"):
+    st.info(
+        "Catatan: simulasi LLM memanggil model minimal dua kali per hari. "
+        "Untuk awal, gunakan 7 hari dulu agar cepat."
+    )
+
+    col_run1, col_run2 = st.columns(2)
+
+    with col_run1:
+        run_rule_based = st.button("Jalankan Simulasi Rule-Based")
+
+    with col_run2:
+        run_llm_based = st.button("Jalankan Simulasi dengan LLM")
+
+    if run_rule_based:
         df = run_simulation(
             days=days,
             seed=int(seed)
         )
 
-        st.subheader("Grafik GRACE Index")
+        st.subheader("Grafik GRACE Index - Rule-Based")
         st.line_chart(df.set_index("day")["GRACE"])
 
-        st.subheader("Tabel Simulasi Harian")
+        st.subheader("Tabel Simulasi Harian - Rule-Based")
         st.dataframe(df, width="stretch")
 
         stable_days = len(df[df["GRACE"] >= 70])
@@ -312,17 +346,101 @@ if page == "Digital Twin Simulator":
         )
 
         df.to_csv(
-            "data/simulation_results.csv",
+            "data/simulation_results_rule_based.csv",
             index=False
         )
 
-        st.success("Hasil simulasi disimpan di data/simulation_results.csv.")
+        st.success(
+            "Hasil simulasi rule-based disimpan di "
+            "data/simulation_results_rule_based.csv."
+        )
+
+    if run_llm_based:
+        with st.spinner("Menjalankan simulasi LLM. Ini bisa memakan waktu..."):
+            df = run_simulation_with_llm(
+                profile=selected_profile,
+                days=days,
+                seed=int(seed),
+                ollama_url=ollama_url,
+                model=selected_model,
+            )
+
+        st.subheader("Grafik GRACE Index - LLM")
+        st.line_chart(df.set_index("day")["GRACE"])
+
+        st.subheader("Tabel Simulasi Harian dengan Daily Story")
+        st.dataframe(df, width="stretch")
+
+        st.subheader("Contoh Daily Story")
+
+        selected_day = st.slider(
+            "Pilih hari untuk melihat cerita",
+            min_value=1,
+            max_value=len(df),
+            value=1
+        )
+
+        story = df.loc[df["day"] == selected_day, "daily_story"].iloc[0]
+        event = df.loc[df["day"] == selected_day, "event"].iloc[0]
+        stimulus = df.loc[df["day"] == selected_day, "stimulus"].iloc[0]
+        zone = df.loc[df["day"] == selected_day, "zone"].iloc[0]
+        grace_score = df.loc[df["day"] == selected_day, "GRACE"].iloc[0]
+
+        st.write(f"**Hari:** {selected_day}")
+        st.write(f"**Event:** {event}")
+        st.write(f"**Stimulus:** {stimulus}")
+        st.write(f"**GRACE Score:** {grace_score}")
+        st.write(f"**Zone:** {zone}")
+        st.write(story)
+
+        stable_days = len(df[df["GRACE"] >= 70])
+        vulnerable_days = len(df[df["GRACE"] < 70])
+
+        col1, col2, col3 = st.columns(3)
+
+        col1.metric(
+            "Rata-rata GRACE",
+            round(df["GRACE"].mean(), 2)
+        )
+
+        col2.metric(
+            "Stable Days",
+            stable_days
+        )
+
+        col3.metric(
+            "Vulnerable/Disrupted Days",
+            vulnerable_days
+        )
+
+        df.to_csv(
+            "data/simulation_results_llm.csv",
+            index=False
+        )
+
+        st.success(
+            "Hasil simulasi LLM disimpan di "
+            "data/simulation_results_llm.csv."
+        )
 
     st.divider()
 
-    if os.path.exists("data/simulation_results.csv"):
-        st.subheader("Hasil Simulasi Terakhir")
-        sim_df = pd.read_csv("data/simulation_results.csv")
-        st.dataframe(sim_df, width="stretch")
-    else:
-        st.info("Belum ada hasil simulasi tersimpan.")
+    st.subheader("Hasil Simulasi Tersimpan")
+
+    col_saved1, col_saved2 = st.columns(2)
+
+    with col_saved1:
+        if os.path.exists("data/simulation_results_rule_based.csv"):
+            st.write("Rule-Based terakhir")
+            sim_rule_df = pd.read_csv("data/simulation_results_rule_based.csv")
+            st.dataframe(sim_rule_df, width="stretch")
+        else:
+            st.info("Belum ada hasil simulasi rule-based.")
+
+    with col_saved2:
+        if os.path.exists("data/simulation_results_llm.csv"):
+            st.write("LLM terakhir")
+            sim_llm_df = pd.read_csv("data/simulation_results_llm.csv")
+            st.dataframe(sim_llm_df, width="stretch")
+        else:
+            st.info("Belum ada hasil simulasi LLM.")

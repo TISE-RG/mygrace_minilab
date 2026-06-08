@@ -257,3 +257,61 @@ def recommend_prompt(values):
     if "ketahanan" in values:
         return "naratif"
     return "naratif"
+
+def build_simulated_daily_story_prompt(profile: dict, event_name: str, grace_before: dict) -> str:
+    return f"""
+Anda adalah GRACE Daily Story Creation Engine.
+
+Tugas Anda adalah membuat cerita harian singkat untuk digital twin lansia berdasarkan profil dan kejadian hari ini.
+
+Profil lansia:
+Nama: {profile.get("name")}
+Usia: {profile.get("age")}
+Latar belakang: {profile.get("background")}
+Peran hidup: {profile.get("roles")}
+Nilai utama: {profile.get("values")}
+Kekuatan: {profile.get("strengths")}
+Kerentanan: {profile.get("vulnerabilities")}
+
+Kondisi GRACE sebelum kejadian:
+{grace_before}
+
+Kejadian hari ini:
+{event_name}
+
+Buat keluaran dalam format berikut:
+
+JUDUL:
+[judul pendek]
+
+CERITA HARIAN:
+[1-2 paragraf dari sudut pandang lansia, hangat, realistis, tidak berlebihan]
+
+MAKNA:
+[2-3 butir makna hidup]
+
+HERO JOURNEY TAGS:
+Ordinary World:
+Trial:
+Guide:
+Courage:
+Insight:
+Return:
+
+REKOMENDASI STIMULUS:
+[pilih satu: naratif / relasional / spiritual / kontribusi / komunitas / praktis / none]
+
+CATATAN:
+[catatan singkat risiko atau peluang]
+"""
+
+
+def generate_simulated_daily_story(
+    profile: dict,
+    event_name: str,
+    grace_before: dict,
+    ollama_url: str = DEFAULT_OLLAMA_URL,
+    model: str = DEFAULT_OLLAMA_MODEL
+) -> str:
+    prompt = build_simulated_daily_story_prompt(profile, event_name, grace_before)
+    return call_ollama(prompt, ollama_url=ollama_url, model=model)
