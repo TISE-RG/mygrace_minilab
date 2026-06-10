@@ -1,4 +1,5 @@
 import os
+import json
 import pandas as pd
 import streamlit as st
 
@@ -16,6 +17,35 @@ from elder_profiles import ELDER_PROFILES
 from simulator_llm import run_simulation_with_llm
 from experiment_runner import run_experiment_suite
 
+
+# =========================
+# Helpers
+# =========================
+
+def load_all_story_sources() -> pd.DataFrame:
+    frames = []
+
+    if os.path.exists("data/stories.csv"):
+        web_df = pd.read_csv("data/stories.csv")
+        web_df["source"] = "web_app"
+        frames.append(web_df)
+
+    if os.path.exists("data/telegram_stories.csv"):
+        tg_df = pd.read_csv("data/telegram_stories.csv")
+        tg_df["source"] = "telegram"
+        frames.append(tg_df)
+
+    if not frames:
+        return pd.DataFrame()
+
+    df = pd.concat(frames, ignore_index=True)
+
+    if "timestamp" not in df.columns:
+        df["timestamp"] = ""
+
+    return df
+
+
 # =========================
 # Setup
 # =========================
@@ -29,8 +59,8 @@ st.set_page_config(
 
 st.title("MyGRACE MiniLab")
 st.caption(
-    "Quick win Tahap 2: Story Companion + Digital Twin Simulator "
-    "+ Ollama LLM + LLM Daily Story + Ollama Benchmark"
+    "Story Companion + Digital Twin Simulator + Experiment Dashboard "
+    "+ Telegram Data Entry + Ollama Benchmark"
 )
 
 
@@ -42,7 +72,7 @@ st.sidebar.title("Navigasi")
 
 page = st.sidebar.radio(
     "Pilih halaman",
-    ["Story Companion", "Digital Twin Simulator",  "Experiment Dashboard"]
+    ["Story Companion", "Digital Twin Simulator", "Experiment Dashboard"]
 )
 
 st.sidebar.divider()
@@ -78,14 +108,7 @@ if test_clicked or refresh_clicked:
         st.session_state["available_models"] = models
 
         if st.session_state["selected_model"] not in models:
-            tagged_default = next(
-                (
-                    model_name for model_name in models
-                    if model_name.startswith(f"{DEFAULT_OLLAMA_MODEL}:")
-                ),
-                None,
-            )
-            st.session_state["selected_model"] = tagged_default or models[0]
+            st.session_state["selected_model"] = models[0]
 
         st.sidebar.success(f"Ollama terhubung. {len(models)} model ditemukan.")
     else:
@@ -208,7 +231,7 @@ if os.path.exists("data/ollama_benchmark.csv"):
     with st.sidebar.expander("Riwayat benchmark", expanded=False):
         st.dataframe(
             pd.read_csv("data/ollama_benchmark.csv"),
-            width="stretch"
+            use_container_width=True
         )
 
 
@@ -312,6 +335,15 @@ if page == "Story Companion":
             else:
                 st.success("Tidak ada catatan khusus.")
 
+            st.subheader("Sumber Skoring")
+            st.write(grace_data.get("scoring_source", "unknown"))
+
+            with st.expander("Alasan Skoring", expanded=False):
+                st.json(grace_data.get("scoring_reason", {}))
+
+            with st.expander("Raw LLM Scoring Response", expanded=False):
+                st.write(grace_data.get("raw_llm_scoring_response", ""))
+
             row = {
                 "name": elder_name,
                 "story_type": story_type,
@@ -332,6 +364,12 @@ if page == "Story Companion":
                     "naratif"
                 ),
                 "risk_notes": grace_data.get("risk_notes", ""),
+                "scoring_source": grace_data.get("scoring_source", ""),
+                "scoring_reason": json.dumps(
+                    grace_data.get("scoring_reason", {}),
+                    ensure_ascii=False
+                ) if "json" in globals() else str(grace_data.get("scoring_reason", {})),
+                "raw_llm_scoring_response": grace_data.get("raw_llm_scoring_response", ""),
                 "ollama_url": ollama_url,
                 "model": selected_model,
             }
@@ -354,11 +392,11 @@ if page == "Story Companion":
     st.divider()
 
     if os.path.exists("data/stories.csv"):
-        st.subheader("Cerita Tersimpan")
+        st.subheader("Cerita Tersimpan dari Web App")
         stories_df = pd.read_csv("data/stories.csv")
-        st.dataframe(stories_df, width="stretch")
+        st.dataframe(stories_df, use_container_width=True)
     else:
-        st.info("Belum ada cerita tersimpan.")
+        st.info("Belum ada cerita tersimpan dari Web App.")
 
     st.divider()
 
@@ -368,6 +406,78 @@ if page == "Story Companion":
         st.dataframe(telegram_df, use_container_width=True)
     else:
         st.info("Belum ada cerita dari Telegram.")
+
+    st.divider()
+    st.subheader("Integrated Story History")
+
+    all_story_df = load_all_story_sources()
+
+    if not all_story_df.empty:
+        st.dataframe(all_story_df, use_container_width=True)
+
+        if "GRACE" in all_story_df.columns:
+            numeric_df = all_story_df.copy()
+            numeric_df["GRACE"] = pd.to_numeric(numeric_df["GRACE"], errors="coerce")
+            numeric_df = numeric_df.dropna(subset=["GRACE"])
+
+            if not numeric_df.empty:
+                col1, col2, col3 = st.columns(3)
+
+                col1.metric("Total entries", len(numeric_df))
+                col2.metric("Average GRACE", round(numeric_df["GRACE"].mean(), 2))
+                col3.metric(
+                    "GRACE range",
+                    f"{numeric_df['GRACE'].min()}–{numeric_df['GRACE'].max()}"
+                )
+
+                st.subheader("GRACE by Entry")
+                chart_df = numeric_df.reset_index()
+                chart_df["entry"] = chart_df.index + 1
+                st.line_chart(chart_df.set_index("entry")["GRACE"])
+
+                if "source" in numeric_df.columns:
+                    st.subheader("Average GRACE by Source")
+                    source_summary = (
+                        numeric_df.groupby("source")["GRACE"]
+                        .mean()
+                        .reset_index()
+                    )
+                    st.bar_chart(source_summary.set_index("source"))
+
+                if "recommended_stimulus" in numeric_df.columns:
+                    st.subheader("Stimulus Distribution")
+                    stim_summary = (
+                        numeric_df["recommended_stimulus"]
+                        .fillna("unknown")
+                        .value_counts()
+                        .reset_index()
+                    )
+                    stim_summary.columns = ["stimulus", "count"]
+                    st.bar_chart(stim_summary.set_index("stimulus"))
+
+                if "zone" in numeric_df.columns:
+                    st.subheader("Zone Distribution")
+                    zone_summary = (
+                        numeric_df["zone"]
+                        .fillna("unknown")
+                        .value_counts()
+                        .reset_index()
+                    )
+                    zone_summary.columns = ["zone", "count"]
+                    st.bar_chart(zone_summary.set_index("zone"))
+
+                if "scoring_source" in numeric_df.columns:
+                    st.subheader("Scoring Source Distribution")
+                    scoring_summary = (
+                        numeric_df["scoring_source"]
+                        .fillna("unknown")
+                        .value_counts()
+                        .reset_index()
+                    )
+                    scoring_summary.columns = ["scoring_source", "count"]
+                    st.bar_chart(scoring_summary.set_index("scoring_source"))
+    else:
+        st.info("Belum ada cerita dari sumber mana pun.")
 
 
 # =========================
@@ -436,7 +546,7 @@ if page == "Digital Twin Simulator":
         st.line_chart(df.set_index("day")["GRACE"])
 
         st.subheader("Tabel Simulasi Harian - Rule-Based")
-        st.dataframe(df, width="stretch")
+        st.dataframe(df, use_container_width=True)
 
         stable_days = len(df[df["GRACE"] >= 70])
         vulnerable_days = len(df[df["GRACE"] < 70])
@@ -482,7 +592,7 @@ if page == "Digital Twin Simulator":
         st.line_chart(df.set_index("day")["GRACE"])
 
         st.subheader("Tabel Simulasi Harian dengan Daily Story")
-        st.dataframe(df, width="stretch")
+        st.dataframe(df, use_container_width=True)
 
         st.subheader("Contoh Daily Story")
 
@@ -546,7 +656,7 @@ if page == "Digital Twin Simulator":
         if os.path.exists("data/simulation_results_rule_based.csv"):
             st.write("Rule-Based terakhir")
             sim_rule_df = pd.read_csv("data/simulation_results_rule_based.csv")
-            st.dataframe(sim_rule_df, width="stretch")
+            st.dataframe(sim_rule_df, use_container_width=True)
         else:
             st.info("Belum ada hasil simulasi rule-based.")
 
@@ -554,9 +664,10 @@ if page == "Digital Twin Simulator":
         if os.path.exists("data/simulation_results_llm.csv"):
             st.write("LLM terakhir")
             sim_llm_df = pd.read_csv("data/simulation_results_llm.csv")
-            st.dataframe(sim_llm_df, width="stretch")
+            st.dataframe(sim_llm_df, use_container_width=True)
         else:
             st.info("Belum ada hasil simulasi LLM.")
+
 
 # =========================
 # Page 3: Experiment Dashboard
@@ -632,7 +743,7 @@ if page == "Experiment Dashboard":
         st.success("Eksperimen selesai.")
 
         st.subheader("Ringkasan Hasil Eksperimen")
-        st.dataframe(summary_df, width="stretch")
+        st.dataframe(summary_df, use_container_width=True)
 
         st.subheader("Perbandingan Average GRACE")
         avg_chart_df = summary_df.set_index("condition")[["average_grace"]]
@@ -658,7 +769,7 @@ if page == "Experiment Dashboard":
         st.line_chart(pivot_df)
 
         st.subheader("Data Harian Semua Kondisi")
-        st.dataframe(all_daily_df, width="stretch")
+        st.dataframe(all_daily_df, use_container_width=True)
 
         st.download_button(
             label="Download Ringkasan Eksperimen CSV",
@@ -681,13 +792,13 @@ if page == "Experiment Dashboard":
     if os.path.exists("data/experiment_summary.csv"):
         saved_summary = pd.read_csv("data/experiment_summary.csv")
         st.write("Ringkasan terakhir")
-        st.dataframe(saved_summary, width="stretch")
+        st.dataframe(saved_summary, use_container_width=True)
     else:
         st.info("Belum ada ringkasan eksperimen tersimpan.")
 
     if os.path.exists("data/experiment_daily_results.csv"):
         saved_daily = pd.read_csv("data/experiment_daily_results.csv")
         st.write("Data harian terakhir")
-        st.dataframe(saved_daily, width="stretch")
+        st.dataframe(saved_daily, use_container_width=True)
     else:
         st.info("Belum ada data harian eksperimen tersimpan.")

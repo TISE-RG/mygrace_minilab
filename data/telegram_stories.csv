@@ -1,4 +1,4 @@
-timestamp,telegram_user_id,telegram_username,telegram_first_name,story_type,raw_story,narrative,N,S,R,C,E,A,GRACE,zone,values,emotion,recommended_stimulus,risk_notes,ollama_url,model
+timestamp,telegram_user_id,telegram_username,telegram_first_name,story_type,raw_story,narrative,N,S,R,C,E,A,GRACE,zone,values,emotion,recommended_stimulus,risk_notes,ollama_url,model,telegram_last_name
 2026-06-08T12:18:16,93694501,,AZR,Hari ini,Hari ini saya berhasil membuat aplikasi storytelling autobiography dengan bantuan AI. Saya merasa terbantu oleh tools yang tersedia,"JUDUL:
 ""Kunci untuk Membuat Cerita Hidup yang Berarti""
 
@@ -23,7 +23,7 @@ SARAN STIMULUS:
 Relasional
 
 CATATAN KEHATI-HATIAN:
-Tidak ada catatan khusus.",70.0,70.0,70.0,70.0,70.0,70.0,70.0,Stable,"keluarga, iman","tenang, rindu",naratif,singkat,http://100.112.221.112:11434,llama3.2
+Tidak ada catatan khusus.",70.0,70.0,70.0,70.0,70.0,70.0,70.0,Stable,"keluarga, iman","tenang, rindu",naratif,singkat,http://100.112.221.112:11434,llama3.2,
 2026-06-08T12:23:04,93694501,,AZR,Hari ini,Hari ini saya berhasil membuat aplikasi storytelling autobiography dengan bantuan AI. Saya merasa terbantu oleh tools yang tersedia,"JUDUL:
 ""Kebanggaan Membuat Kehidupan Sendiri""
 
@@ -46,7 +46,7 @@ SARAN STIMULUS:
 Relasional
 
 CATATAN KEHATI-HATIAN:
-Tidak ada catatan khusus.",70.0,70.0,70.0,70.0,70.0,70.0,70.0,Stable,"keluarga, iman","tenang, rindu",naratif,singkat,http://100.112.221.112:11434,llama3.2
+Tidak ada catatan khusus.",70.0,70.0,70.0,70.0,70.0,70.0,70.0,Stable,"keluarga, iman","tenang, rindu",naratif,singkat,http://100.112.221.112:11434,llama3.2,
 2026-06-08T12:34:19,93694501,,AZR,Hari ini,Hari saya jumpa William yang mengerti apa yang saya lakukan.,"JUDUL:
 ""Temuan yang Mengubah Hidup""
 
@@ -69,7 +69,7 @@ SARAN STIMULUS:
 Relasional
 
 CATATAN KEHATI-HATIAN:
-Tidak ada catatan khusus.",70.0,70.0,70.0,70.0,70.0,70.0,70.0,Stable,"keluarga, iman","tenang, rindu",naratif,singkat,http://100.112.221.112:11434,llama3.2
+Tidak ada catatan khusus.",70.0,70.0,70.0,70.0,70.0,70.0,70.0,Stable,"keluarga, iman","tenang, rindu",naratif,singkat,http://100.112.221.112:11434,llama3.2,
 2026-06-08T12:52:04,93694501,,AZR,Hari ini,Siang ini saya ikut rapat dengan kolega saya di Kelompok Keahlian Teknologi Informasi. Saya melaporkan pekerjaan saya semoga bermanfaat,"JUDUL:
 Hari yang Bermanfaat
 
@@ -92,4 +92,21 @@ SARAN STIMULUS:
 Naratif
 
 CATATAN KEHATI-HATIAN:
-Tidak ada catatan khusus.",70.0,70.0,70.0,70.0,70.0,70.0,70.0,Stable,"keluarga, iman","tenang, rindu",naratif,singkat,http://100.112.221.112:11434,llama3.2
+Tidak ada catatan khusus.",70.0,70.0,70.0,70.0,70.0,70.0,70.0,Stable,"keluarga, iman","tenang, rindu",naratif,singkat,http://100.112.221.112:11434,llama3.2,
+2026-06-08T13:06:26,93694501,,AZR,Masa lalu,"Dulu waktu saya mengajar, saya merasakan mahasiswa eager untuk belajar. Sekarang mahasiswa terlihat tidak antusias. Tapi itu memicu saya untuk berinovasi membuat kuliah saya makin menarik","JUDUL:
+""Masa Depan yang Berubah""
+
+NARASI BERMAKNA:
+Saya masih ingat saat-saatku sebagai guru, ketika mahasiswa terlihat sangat antusias dan bersemangat untuk belajar. Mereka memiliki semangat hidup yang tak terkalahkan, dan saya merasa bangga menjadi bagian dari perjalanan mereka. Namun, sekarang saat ini, saya melihat mahasiswaku yang terlihat tidak antusias sama sekali. Mereka terlihat lelah, kehilangan semangat hidup, dan tidak memiliki harapan yang jelas untuk masa depan.
+
+Saya merasa sedih dan kesal karena perubahan ini, tetapi saya juga ingin menggunakan kesedihan ini sebagai kesempatan untuk berinovasi dan membuat kuliah saya lebih menarik lagi. Saya ingin membantu mahasiswaku menemukan kembali semangat hidup mereka dan memberikan mereka harapan yang lebih baik untuk masa depan.
+
+Saya tahu bahwa saya tidak bisa mengubah dunia, tetapi saya dapat berperan sebagai pengaruh positif dalam kehidupan mahasiswaku. Saya ingin menjadi contoh bagi mereka bahwa meskipun hidup kita memiliki banyak tantangan, kita masih dapat menemukan cara untuk berinovasi dan membuat perubahan yang positif.
+
+MAKNA HIDUP:
+1. Harapan tidak pernah mati: Meskipun situasi mungkin terlihat gelap, kita harus selalu mencari harapan dan keberanian untuk berubah.
+2. Berinovasi adalah kunci: Dengan berinovasi, kita dapat menemukan cara untuk membuat perubahan positif dalam kehidupan kita dan orang lain.
+3. Pengaruh positif adalah kuat: Kita dapat memiliki dampak besar pada orang lain dengan menjadi contoh yang baik dan memberikan dukungan yang positif.
+
+PERTANYAAN LANJUTAN:
+Apakah Anda memiliki pengalaman serupa ketika melihat perubahan dalam kehidupan mahasiswaku atau teman-teman?",70.0,70.0,70.0,70.0,70.0,70.0,70.0,Stable,"keluarga, iman","tenang, rindu",naratif,singkat,http://100.112.221.112:11434,llama3.2,Langi

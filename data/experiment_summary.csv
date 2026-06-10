@@ -1,5 +1,5 @@
 condition,average_grace,final_grace,min_grace,max_grace,stable_days,vulnerable_days,intervention_count,days
-Baseline,76.25,75.65,69.62,83.43,89,1,0,90
-Story Only,84.29,86.9,72.97,89.43,90,0,0,90
-Story + Stimulus,91.72,95.85,75.18,96.51,90,0,90,90
-Full GRACE LLM,72.71,72.39,70.2,75.68,90,0,90,90
+Baseline,75.23,74.29,70.54,81.56,30,0,0,30
+Story Only,81.39,82.97,72.97,86.6,30,0,0,30
+Story + Stimulus,87.34,92.08,75.18,92.4,30,0,30,30
+Full GRACE LLM,82.68,90.1,62.69,90.1,29,1,30,30
