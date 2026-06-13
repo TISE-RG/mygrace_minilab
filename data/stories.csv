@@ -1,4 +1,4 @@
-name,story_type,raw_story,narrative,N,S,R,C,E,A,GRACE,zone,values,emotion,recommended_stimulus,risk_notes,ollama_url,model
+name,story_type,raw_story,narrative,N,S,R,C,E,A,GRACE,zone,values,emotion,recommended_stimulus,risk_notes,ollama_url,model,scoring_source,scoring_reason,raw_llm_scoring_response
 Ibu Maria,Hari ini,"Hari ini saya duduk di teras cukup lama. Anak saya belum menelepon sejak kemarin.
 Saya merasa agak sepi. Tetapi tetangga lewat dan menyapa saya dengan ramah.
 Saya jadi merasa masih diperhatikan.","**JUDUL:**
@@ -20,7 +20,7 @@ Bagaimana perasaan Ibu Maria saat melihat senyum ramah dari tetangga itu? Apakah
 Relasional (Fokus pada hubungan antarmanusia dan koneksi emosional).
 
 **CATATAN KEHATI-HATIAN:**
-Cerita ini mengandung nuansa kesepian dan kerinduan akan keluarga. Penting untuk diingat bahwa perasaan sepi itu adalah perasaan yang wajar dan valid. Kehangatan dari sapaan tetangga adalah pengingat yang indah bahwa dukungan dan perhatian itu ada di sekitar Ibu Maria.",80.0,75.0,90.0,65.0,85.0,80.0,79.55,Stable,"komunitas, martabat diri","tenang, rindu",Naratif (Fokus pada peran dan koneksi komunitas),Risiko kesepian/isolasi; perlu validasi perasaan rindu.,,
+Cerita ini mengandung nuansa kesepian dan kerinduan akan keluarga. Penting untuk diingat bahwa perasaan sepi itu adalah perasaan yang wajar dan valid. Kehangatan dari sapaan tetangga adalah pengingat yang indah bahwa dukungan dan perhatian itu ada di sekitar Ibu Maria.",80.0,75.0,90.0,65.0,85.0,80.0,79.55,Stable,"komunitas, martabat diri","tenang, rindu",Naratif (Fokus pada peran dan koneksi komunitas),Risiko kesepian/isolasi; perlu validasi perasaan rindu.,,,,,
 Ibu Maria,Hari ini,"Hari ini saya terkenang suami saya, saya rindu. Saya berdoa agar kembali dipertemukan ","JUDUL:
 ""Rindu yang Abadi""
 
@@ -43,7 +43,7 @@ SARAN STIMULUS:
 Relasional
 
 CATATAN KEHATI-HATIAN:
-Tidak ada catatan khusus.",70.0,70.0,70.0,70.0,70.0,70.0,70.0,Stable,"keluarga, iman","tenang, rindu",naratif,singkat,http://100.112.221.112:11434,llama3.2:latest
+Tidak ada catatan khusus.",70.0,70.0,70.0,70.0,70.0,70.0,70.0,Stable,"keluarga, iman","tenang, rindu",naratif,singkat,http://100.112.221.112:11434,llama3.2:latest,,,
 Ibu Maria,Hari ini,hari ini saya mengurus berkas di kantor pajak tepi tidak berhasil. Namun pengalaman ini menyenangkan dan membuat relasi menjadi lebih baik,"JUDUL:
 ""Keterampilan Baru""
 
@@ -68,4 +68,120 @@ SARAN STIMULUS:
 Naratif
 
 CATATAN KEHATI-HATIAN:
-Tidak ada catatan khusus.",70.0,70.0,70.0,70.0,70.0,70.0,70.0,Stable,"keluarga, iman","tenang, rindu",naratif,singkat,http://100.112.221.112:11434,llama3.2:latest
+Tidak ada catatan khusus.",70.0,70.0,70.0,70.0,70.0,70.0,70.0,Stable,"keluarga, iman","tenang, rindu",naratif,singkat,http://100.112.221.112:11434,llama3.2:latest,,,
+Ibu Maria,Hari ini,"hari ini ibu Maria pergi ke dokter sayraf di rs has. hari masih pukul 7 ia sudah berangkat. dari situ ia pergi ke RS Melinda, waktu kosong diantara nya ia pergi ke sebuah hotel dekat rs melinda untuk berjumpaa dengan tomas pemilik hotelei itu. mekiapun ibu maria masih bersuami dan berusia 67 tahuan, tomas jugaa beristri, mereka suka berhubungan intim. jadi ibu maria dan bapk tomas masuk kamar hotel dan berhubungan badan. ibu maria pulang pk 17 spree, dan mengeluh betpa lelahnya ariini. betapa laparnya ia, tapi ia kelihatan segar. senang dan puas. Ibu Maria memanag menyukai berhubungan badan","JUDUL: ""Hari Senyum dan Selesa""
+
+NARASI BERMAKNA:
+Ibu Maria, seorang ibu yang ingin menikmati hidup dengan senang hati, berkunjung ke dokter sayraf di RS Has. Pada hari itu, ia berangkat dari rumah pukul 7 pagi dan merasa sangat terharu. Setelah mengunjungi dokter, Ibu Maria pergi ke RS Melinda untuk menghabiskan waktu yang kosong. Di sana, ia bertemu dengan Tomas, pemilik hotel dekat RS Melinda. Mereka merasa terhubung dan suka berhubungan intim. Ibu Maria dan Bapak Tomas menghabiskan waktu yang indah dalam kamar hotel. Setelah itu, ia pulang pada pukul 17 siang dengan rasa lelahnya tetap sangat puas dan senang. Ibu Maria memanag menyukai berhubungan badan.
+
+MAKNA HIDUP:
+1. Kesan kuat dari hubungan intim yang menghiburkan.
+2. Kemampuan untuk mengenali dan mengikuti keinginan diri.
+3. Pengertian tentang senang dan puas hidup.
+4. Peran penting dari waktu kosong dalam memperoleh kesegaran dan hidup yang lebih baik.
+
+PERTANYAAN LANJUTAN: ""Bagaimana cara Anda untuk mendapatkan waktu kosong dan menghabiskannya dengan sebaik-baiknya?""
+
+SARAN STIMULUS: naratif
+
+CATATAN KEHATI-HATIAN: Tidak ada catatan khusus.",75.0,60.0,85.0,70.0,80.0,90.0,77.0,Stable,"value1, value2","emotion1, emotion2",naratif | relasional | spiritual | kontribusi | komunitas | praktis,short note,http://100.112.221.112:11434,dolphin-mistral:latest,llm,"{""N"": ""Ibu Maria memiliki identitas yang kuat dan menghubungkan event-eventnya dalam hidupnya."", ""S"": ""Ibu Maria menggunakan dukungan dari Tomas sebagai pusat kepadaan dan usaha dalam hidupnya."", ""R"": ""Ibu Maria memiliki hubungan yang hangat dengan Tomas, menunjukkan relasi vital."", ""C"": ""Ibu Maria menciptakan waktu kosong untuk berkolaborasi dengan Tomas dan merasa bermanfaat."", ""E"": ""Ibu Maria terhubung dengan RS Melinda dan hotel dekatnya, menunjukkan kecanggatan dalam komunitas."", ""A"": ""Ibu Maria beradaptasi dengan masalah kesehatannya dan mendapatkan bantuan dari Tomas.""}","{
+  ""N"": 75,
+  ""S"": 60,
+  ""R"": 85,
+  ""C"": 70,
+  ""E"": 80,
+  ""A"": 90,
+  ""values"": [""value1"", ""value2""],
+  ""emotion"": [""emotion1"", ""emotion2""],
+  ""risk_notes"": ""short note"",
+  ""recommended_stimulus"": ""naratif | relasional | spiritual | kontribusi | komunitas | praktis"",
+  ""scoring_reason"": {
+    ""N"": ""Ibu Maria memiliki identitas yang kuat dan menghubungkan event-eventnya dalam hidupnya."",
+    ""S"": ""Ibu Maria menggunakan dukungan dari Tomas sebagai pusat kepadaan dan usaha dalam hidupnya."",
+    ""R"": ""Ibu Maria memiliki hubungan yang hangat dengan Tomas, menunjukkan relasi vital."",
+    ""C"": ""Ibu Maria menciptakan waktu kosong untuk berkolaborasi dengan Tomas dan merasa bermanfaat."",
+    ""E"": ""Ibu Maria terhubung dengan RS Melinda dan hotel dekatnya, menunjukkan kecanggatan dalam komunitas."",
+    ""A"": ""Ibu Maria beradaptasi dengan masalah kesehatannya dan mendapatkan bantuan dari Tomas.""
+  }
+}"
+Ibu Maria,Hari ini,"Ibu Maria sudah berusia 67 setia mengurus rumah tangga terutama Pak Daniel yang sering sakit. Meskipun lelah, Bu Maria tetap menjaga penampilan. Dia punya banyak teman , dan Pak Thomas pemilik hotel adalah teman intim. Sekali sekali Bu Maria pamit pergi dari pagi sampai sore untuk berobat. Diam diam dia pergi ke Hotel pak Thomas untuk melepas hasrat bersetubuh. Setelah puas. Bu Maria kembali pulang dan mengurus rumah tangga dengan rajin. Bu Maria menikmati masa lansia dengan maksimal
+","JUDUL: ""Ibu Maria: Menyelamitkan Masa Lansia""
+
+NARASI BERMAKNA:
+Bu Maria, seorang ibu yang lebih dari setengah abad, telah menjaga rumah tangga dengan rajin. Dia selalu mendukung Pak Daniel, suami yang sering sakit. Selain itu, dia memiliki banyak teman dan salah satunya adalah Pak Thomas, pemilik hotel.
+
+Meskipun lelah, Bu Maria tetap menjaga penampilannya dengan baik. Sekali sekali, ia pergi ke hotel Pak Thomas untuk melepas hasrat bersetubuh. Setelah puas, dia kembali pulang dan mengurus rumah tangga dengan rajin.
+
+Bu Maria menikmati masa lansia dengan maksimal. Dia tahu bahwa waktu yang lebih tua akan datang, tapi dia ingin memastikan bahwa ia selalu ada untuk mereka yang tercinta.
+
+MAKNA HIDUP:
+1. Kepemimpinan dan pengelolaan rumah tangga dapat membuat orang lebih tua menjadi lebih baik dan bersifat rajin.
+2. Perseveransi dan keinginan untuk berusaha memastikan keselamatan dan kesehatan suami yang sering sakit.
+3. Memiliki teman yang dekat dapat membantu menghadirkan suasana yang lebih senang dan mendukung hidup sehari-hari.
+4. Menyelamitkan masa lansia dengan banyak aktivitas dan pergi-pulang ke hotel adalah cara untuk menghadirkan suasana yang lebih senang dan mendukung hidup sehari-hari.
+
+PERTANYAAN LANJUTAN:
+Bagaimana Anda merasa ketika Anda tinggal di hotel? Apakah ada hal yang membuatmu terasa lebih senang dan menyenangkan?
+
+SARAN STIMULUS:
+Naratif
+
+CATATAN KEHATI-HATIAN:
+Tidak ada catatan khusus.",80.0,65.0,70.0,65.0,65.0,70.0,70.05,Stable,"value1, value2","emotion1, emotion2",naratif | relasional | spiritual | kontribusi | komunitas | praktis,short note,http://100.112.221.112:11434,dolphin-mistral:latest,llm,"{""N"": ""Ibu Maria shows identity, life meaning, memory continuity, self-understanding, and ability to connect events into a meaningful life story."", ""S"": ""Bu Maria mentions faith in taking care of her husband and going to the hotel for relaxation."", ""R"": ""The story includes warm connection with family and friends."", ""C"": ""Bu Maria feels useful by taking care of her husband and managing their household."", ""E"": ""Bu Maria is connected to the wider world through her relationship with Pak Thomas, the hotel owner."", ""A"": ""Bu Maria copes with her husband's illness and remains hopeful.""}","{
+  ""N"": 80,
+  ""S"": 65,
+  ""R"": 70,
+  ""C"": 65,
+  ""E"": 65,
+  ""A"": 70,
+  ""values"": [""value1"", ""value2""],
+  ""emotion"": [""emotion1"", ""emotion2""],
+  ""risk_notes"": ""short note"",
+  ""recommended_stimulus"": ""naratif | relasional | spiritual | kontribusi | komunitas | praktis"",
+  ""scoring_reason"": {
+    ""N"": ""Ibu Maria shows identity, life meaning, memory continuity, self-understanding, and ability to connect events into a meaningful life story."",
+    ""S"": ""Bu Maria mentions faith in taking care of her husband and going to the hotel for relaxation."",
+    ""R"": ""The story includes warm connection with family and friends."",
+    ""C"": ""Bu Maria feels useful by taking care of her husband and managing their household."",
+    ""E"": ""Bu Maria is connected to the wider world through her relationship with Pak Thomas, the hotel owner."",
+    ""A"": ""Bu Maria copes with her husband's illness and remains hopeful.""
+  }
+}"
+Ibu Maria,Hari ini,"Ibu Maria cantik. i usia 67 ia masih terlihat 40an.  ia sudah melahiran 4 anak, yang sudah dewasa. di kamarhotel ia mrasa tersanjung. ketika pak thomas penuh nafsu mengguulinya, ia merasa senang. ia merasa nikmat dan puas. ia merasa bebas untuk melakukan kepada pak thomas apa yang tidak bisa ua brikan pada suami","JUDUL: ""Hari Kecantikan""
+
+NARASI BERMAKNA:
+Dengan usia 67 tahun dan tampilannya yang masih muda, Ibu Maria merasa seperti wanita-wanita yang lebih muda. Dia sudah menjadi ibu empat anak yang sudah dewasa. Saat di kamar hotel, ia merasa terlihat dengan lebih baik dan lebih cantik.
+
+Saat pak Thomas tampilnya sama sekali menarik, Ibu Maria merasa senang dan puas. Dia merasa bebas untuk melakukan kepada pak Thomas apa yang tidak bisa ua brikan pada suami.
+
+MAKNA HIDUP:
+1. Kebaikan usia
+2. Kemungkinan perubahan
+3. Keberuntungan dalam kehidupan
+4. Sensasi bebas dan puas
+
+PERTANYAAN LANJUTAN:
+""Apakah Anda tetap merasa cantik dan muda, Ibu Maria?""
+
+SARAN STIMULUS: naratif
+
+CATATAN KEHATI-HATIAN: Tidak ada catatan khusus.",70.0,65.0,85.0,45.0,60.0,55.0,64.75,Vulnerability,"kebaikan usia, kemungkinan perubahan, keberuntungan dalam kehidupan","senang, puas, bebas",naratif | relasional | spiritual | kontribusi | komunitas | praktis,"Ibu Maria merasa bebas untuk melakukan kepada pak Thomas apa yang tidak bisa ua brikan pada suami, tapi ini juga membawa risiko.",http://100.112.221.112:11434,dolphin-mistral:latest,llm,"{""N"": ""Ibu Maria merasa cantik dan muda, tetapi belum melansir kehidupan lebih lanjut."", ""S"": ""Dia menyebutkan bahwa pak Thomas membuatnya puas, namun tidak mencakupi apa yang berhubungan dengan kesadaran percaya atau kepercayaan."", ""R"": ""Ibu Maria merasa bebas untuk melakukan kepada pak Thomas, tetapi relasi antara mereka belum terlihat dalam naratif ini."", ""C"": ""Dia tidak menunjukkan kontribusi atau bantuan yang membawa kemudahan bagi orang lain."", ""E"": ""Ibu Maria merasa bebas untuk melakukan kepada pak Thomas, tetapi belum terlihat hubungannya dengan komunitas atau dunia luar rumahnya."", ""A"": ""Ibu Maria merasa senang dan puas, tetapi belum menunjukkan adaptasi resilien yang kuat dalam kehidupan.""}","{
+  ""N"": 70,
+  ""S"": 65,
+  ""R"": 85,
+  ""C"": 45,
+  ""E"": 60,
+  ""A"": 55,
+  ""values"": [""kebaikan usia"", ""kemungkinan perubahan"", ""keberuntungan dalam kehidupan""],
+  ""emotion"": [""senang"", ""puas"", ""bebas""],
+  ""risk_notes"": ""Ibu Maria merasa bebas untuk melakukan kepada pak Thomas apa yang tidak bisa ua brikan pada suami, tapi ini juga membawa risiko."",
+  ""recommended_stimulus"": ""naratif | relasional | spiritual | kontribusi | komunitas | praktis"",
+  ""scoring_reason"": {
+    ""N"": ""Ibu Maria merasa cantik dan muda, tetapi belum melansir kehidupan lebih lanjut."",
+    ""S"": ""Dia menyebutkan bahwa pak Thomas membuatnya puas, namun tidak mencakupi apa yang berhubungan dengan kesadaran percaya atau kepercayaan."",
+    ""R"": ""Ibu Maria merasa bebas untuk melakukan kepada pak Thomas, tetapi relasi antara mereka belum terlihat dalam naratif ini."",
+    ""C"": ""Dia tidak menunjukkan kontribusi atau bantuan yang membawa kemudahan bagi orang lain."",
+    ""E"": ""Ibu Maria merasa bebas untuk melakukan kepada pak Thomas, tetapi belum terlihat hubungannya dengan komunitas atau dunia luar rumahnya."",
+    ""A"": ""Ibu Maria merasa senang dan puas, tetapi belum menunjukkan adaptasi resilien yang kuat dalam kehidupan.""
+  }
+}"

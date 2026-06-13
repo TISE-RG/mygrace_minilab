@@ -367,7 +367,7 @@ if page == "Story Companion":
                 "scoring_source": grace_data.get("scoring_source", ""),
                 "scoring_reason": json.dumps(
                     grace_data.get("scoring_reason", {}),
-                    ensure_ascii=False
+                    ensure_ascii=False          
                 ) if "json" in globals() else str(grace_data.get("scoring_reason", {})),
                 "raw_llm_scoring_response": grace_data.get("raw_llm_scoring_response", ""),
                 "ollama_url": ollama_url,
